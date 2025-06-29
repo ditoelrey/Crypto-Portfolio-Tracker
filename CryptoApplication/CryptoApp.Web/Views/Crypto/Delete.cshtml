@@ -1,0 +1,43 @@
+@model CryptoApp.Domain.Models.Cryptocurrency
+
+@{
+    ViewData["Title"] = "Delete Cryptocurrency";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title text-danger">Delete Cryptocurrency</h2>
+                    
+                    <div class="alert alert-warning">
+                        Are you sure you want to delete @Model.Name (@Model.Symbol.ToUpper())?
+                    </div>
+
+                    <dl class="row">
+                        <dt class="col-sm-3">Name</dt>
+                        <dd class="col-sm-9">@Model.Name</dd>
+
+                        <dt class="col-sm-3">Symbol</dt>
+                        <dd class="col-sm-9">@Model.Symbol.ToUpper()</dd>
+
+                        <dt class="col-sm-3">Current Price</dt>
+                        <dd class="col-sm-9">$@Model.CurrentPrice.ToString("N2")</dd>
+
+                        <dt class="col-sm-3">Added On</dt>
+                        <dd class="col-sm-9">@Model.CreatedAt.ToString("g")</dd>
+                    </dl>
+
+                    <form asp-action="Delete" method="post">
+                        <input type="hidden" asp-for="Id" />
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

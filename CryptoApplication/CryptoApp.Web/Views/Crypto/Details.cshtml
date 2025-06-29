@@ -1,0 +1,47 @@
+@model CryptoApp.Domain.Models.Cryptocurrency
+@using CryptoApp.Application.Interfaces
+@inject IUserService UserService
+
+@{
+    ViewData["Title"] = $"{Model.Name} Details";
+    var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+    var user = userId != null ? await UserService.GetUserWithPortfolioAsync(userId) : null;
+    var portfolioId = user?.Portfolio?.Id;
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title">@Model.Name (@Model.Symbol.ToUpper())</h1>
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <h5>Current Price</h5>
+                                <p class="h3">$@Model.CurrentPrice.ToString("N2")</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        @if (portfolioId != null)
+                        {
+                            <a asp-action="Buy" asp-route-id="@Model.Id" asp-route-portfolioId="@portfolioId" class="btn btn-primary">Buy</a>
+                        }
+                        <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+                        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Auto-refresh price every 30 seconds
+        setTimeout(function() {
+            location.reload();
+        }, 30000);
+    </script>
+}

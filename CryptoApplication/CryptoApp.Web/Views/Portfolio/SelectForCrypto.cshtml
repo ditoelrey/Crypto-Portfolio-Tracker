@@ -1,0 +1,39 @@
+@model IEnumerable<CryptoApp.Domain.Models.Portfolio>
+
+@{
+    ViewData["Title"] = "Select Portfolio";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Select Portfolio</h2>
+                    <p class="card-text text-muted">Choose which portfolio you want to buy the cryptocurrency in:</p>
+                    
+                    <div class="row">
+                        @foreach (var portfolio in Model)
+                        {
+                            <div class="col-md-6 mb-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">@portfolio.Name</h5>
+                                        <a asp-controller="Crypto" asp-action="Buy" 
+                                           asp-route-id="@ViewData["CryptoId"]"
+                                           asp-route-portfolioId="@portfolio.Id" 
+                                           class="btn btn-primary w-100">Select</a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a asp-controller="Crypto" asp-action="Index" class="btn btn-secondary">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

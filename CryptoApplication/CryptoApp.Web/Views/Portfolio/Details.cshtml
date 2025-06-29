@@ -1,0 +1,154 @@
+@model CryptoApp.Domain.Models.Portfolio
+
+@{
+    ViewData["Title"] = $"{Model.Name} - Portfolio Details";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>@Model.Name</h1>
+        <div>
+            <a asp-action="Transactions" asp-route-id="@Model.Id" class="btn btn-info">View Transaction History</a>
+           
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card">                <div class="card-body">
+                    <h5 class="card-title">Portfolio Value</h5>
+                    <h2 class="card-text">$@ViewBag.TotalValue.ToString("#,##0.00")</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5 class="card-title">Holdings</h5>
+            @if (Model.Holdings.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Cryptocurrency</th>
+                                <th>Quantity</th>
+                                <th>Current Value</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var holding in Model.Holdings)
+                            {
+                                <tr>                                    <td>
+                                        @if (holding.Cryptocurrency != null)
+                                        {
+                                            @($"{holding.Cryptocurrency.Name} ({holding.Cryptocurrency.Symbol.ToUpper()})")
+                                        }
+                                        else
+                                        {
+                                            <span class="text-muted">Unknown Cryptocurrency</span>
+                                        }
+                                    </td>
+                                    <td>@holding.Quantity.ToString("0")</td>
+                                    <td>$@holding.CurrentValue.ToString("N2")</td>
+                                    <td>
+                                        @if (holding.Cryptocurrency != null)
+                                        {
+                                            <a asp-controller="Crypto" asp-action="Buy" 
+                                               asp-route-id="@holding.CryptocurrencyId" 
+                                               asp-route-portfolioId="@Model.Id" 
+                                               class="btn btn-success btn-sm">Buy More</a>
+                                            <a asp-controller="Crypto" asp-action="Sell" 
+                                               asp-route-id="@holding.CryptocurrencyId" 
+                                               asp-route-portfolioId="@Model.Id" 
+                                               class="btn btn-danger btn-sm">Sell</a>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info">
+                    You don't have any cryptocurrencies in this portfolio yet.
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="card-title mb-0">Recent Transactions</h5>
+                <a asp-action="Transactions" asp-route-id="@Model.Id" class="btn btn-link">View All</a>
+            </div>
+            @if (Model.Transactions.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Cryptocurrency</th>
+                                <th>Type</th>
+                                <th>Amount</th>
+                                <th>Price</th>
+                                <th>Total Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var transaction in Model.Transactions.OrderByDescending(t => t.Date).Take(5))
+                            {
+                                <tr>
+                                    <td>@transaction.Date.ToLocalTime().ToString("g")</td>
+                                    <td>@transaction.Cryptocurrency.Symbol.ToUpper()</td>
+                                    <td>
+                                        <span class="badge @(transaction.Type == TransactionType.Buy ? "bg-success" : "bg-danger")">
+                                            @transaction.Type
+                                        </span>
+                                    </td>
+                                    <td>@transaction.Amount.ToString("0")</td>
+                                    <td>$@transaction.PriceAtTime.ToString("F2")</td>
+                                    <td>$@((transaction.Amount * transaction.PriceAtTime).ToString("F2"))</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info">
+                    No transactions yet.
+                </div>
+            }
+        </div>
+    </div>
+
+    <a asp-controller="Crypto" asp-action="Index" class="btn btn-primary">Buy Cryptocurrency</a>
+    
+</div>
+
+@section Scripts {    <script>
+        async function refreshPortfolioValue() {
+            try {
+                const response = await fetch(`/Portfolio/CalculateValue/@Model.Id`);
+                const data = await response.json();
+                document.querySelector('.card-text').textContent = '$' + new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(data.value);
+            } catch (error) {
+                console.error('Error fetching portfolio value:', error);
+            }
+        }
+
+        // Load value immediately when page loads
+        refreshPortfolioValue();
+
+        // Then refresh value every 10 minutes (600000 milliseconds)
+        setInterval(refreshPortfolioValue, 600000);
+    </script>
+}

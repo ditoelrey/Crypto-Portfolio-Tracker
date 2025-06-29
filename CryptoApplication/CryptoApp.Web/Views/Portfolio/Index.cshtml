@@ -1,0 +1,39 @@
+@model IEnumerable<CryptoApp.Domain.Models.Portfolio>
+
+@{
+    ViewData["Title"] = "My Portfolio";
+}
+
+<h1>My Portfolio</h1>
+
+<div class="row">
+    @foreach (var portfolio in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@portfolio.Name</h5>
+                    <div id="value-@portfolio.Id">Loading value...</div>
+                    <div class="mt-3">
+                        <a asp-action="Details" asp-route-id="@portfolio.Id" class="btn btn-info">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            @foreach (var portfolio in Model)
+            {
+                <text>
+                $.get('@Url.Action("CalculateValue", new { id = portfolio.Id })', function(data) {
+                    $('#value-@portfolio.Id').text('Total Value: $' + new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(data.value));
+                });
+                </text>
+            }
+        });
+    </script>
+}

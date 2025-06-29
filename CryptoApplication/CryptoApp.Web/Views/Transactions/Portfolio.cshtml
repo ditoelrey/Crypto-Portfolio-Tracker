@@ -1,0 +1,98 @@
+@model IEnumerable<CryptoApp.Domain.Models.Transaction>
+
+@{
+    ViewData["Title"] = "Transaction History";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Transaction History</h1>
+        <div>
+            <a asp-action="Add" asp-route-portfolioId="@Model.FirstOrDefault()?.PortfolioId" class="btn btn-primary">Add New Transaction</a>
+        </div>
+    </div>
+
+    @if (Model.Any())
+    {
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Cryptocurrency</th>
+                                <th>Type</th>
+                                <th>Amount</th>
+                                <th>Price (USD)</th>
+                                <th>Total Value (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var transaction in Model.OrderByDescending(t => t.Date))
+                            {
+                                var totalValue = transaction.Amount * transaction.PriceAtTime;
+                                <tr>
+                                    <td>@transaction.Date.ToLocalTime().ToString("g")</td>
+                                    <td>@transaction.Cryptocurrency.Symbol.ToUpper()</td>
+                                    <td>
+                                        <span class="badge @(transaction.Type == TransactionType.Buy ? "bg-success" : "bg-danger")">
+                                            @transaction.Type
+                                        </span>
+                                    </td>
+                                    <td>@transaction.Amount.ToString("0")</td>
+                                    <td>$@transaction.PriceAtTime.ToString("F2")</td>
+                                    <td>$@totalValue.ToString("F2")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                @{
+                    var totalBought = Model.Where(t => t.Type == TransactionType.Buy).Sum(t => t.Amount * t.PriceAtTime);
+                    var totalSold = Model.Where(t => t.Type == TransactionType.Sell).Sum(t => t.Amount * t.PriceAtTime);
+                }
+
+                <div class="mt-4">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card bg-success text-white">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Bought</h5>
+                                    <p class="card-text">$@totalBought.ToString("F2")</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card bg-danger text-white">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Sold</h5>
+                                    <p class="card-text">$@totalSold.ToString("F2")</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card bg-info text-white">
+                                <div class="card-body">
+                                    <h5 class="card-title">Net Investment</h5>
+                                    <p class="card-text">$@(totalBought - totalSold).ToString("F2")</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">
+            No transactions found. <a asp-action="Add" asp-route-portfolioId="@ViewBag.PortfolioId">Add your first transaction</a>
+        </div>
+    }
+
+    <div class="mt-3">
+        <a asp-controller="Portfolio" asp-action="Details" asp-route-id="@Model.FirstOrDefault()?.PortfolioId" class="btn btn-secondary">Back to Portfolio</a>
+    </div>
+</div>

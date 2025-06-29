@@ -1,0 +1,95 @@
+@model CryptoApp.Domain.Models.Transaction
+
+@{
+    ViewData["Title"] = "Add Transaction";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Add New Transaction</h2>
+                    
+                    <form asp-action="Add" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="PortfolioId" value="@ViewBag.PortfolioId" />
+                        
+                        <div class="mb-3">
+                            <label asp-for="CryptocurrencyId" class="form-label">Cryptocurrency</label>
+                            <select asp-for="CryptocurrencyId" class="form-select" required onchange="updateCurrentPrice()">
+                                <option value="">Select a cryptocurrency</option>
+                                @foreach (var crypto in ViewBag.Cryptocurrencies)
+                                {
+                                    <option value="@crypto.Id" data-coingecko-id="@crypto.CoinGeckoId">@crypto.Name (@crypto.Symbol.ToUpper())</option>
+                                }
+                            </select>
+                            <span asp-validation-for="CryptocurrencyId" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Type" class="form-label">Transaction Type</label>
+                            <select asp-for="Type" class="form-select" required>
+                                <option value="Buy">Buy</option>
+                                <option value="Sell">Sell</option>
+                            </select>
+                            <span asp-validation-for="Type" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Amount" class="form-label">Amount</label>
+                            <input asp-for="Amount" class="form-control" type="number" step="0.00000001" required />
+                            <span asp-validation-for="Amount" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="PriceAtTime" class="form-label">Price (USD)</label>
+                            <div class="input-group">
+                                <input asp-for="PriceAtTime" class="form-control" type="number" step="0.01" required />
+                                <button type="button" class="btn btn-outline-secondary" onclick="updateCurrentPrice()">Get Current Price</button>
+                            </div>
+                            <span asp-validation-for="PriceAtTime" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Date" class="form-label">Transaction Date</label>
+                            <input asp-for="Date" class="form-control" type="datetime-local" value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")" required />
+                            <span asp-validation-for="Date" class="text-danger"></span>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <button type="submit" class="btn btn-primary w-100">Add Transaction</button>
+                            <a asp-controller="Portfolio" asp-action="Details" asp-route-id="@ViewBag.PortfolioId" 
+                               class="btn btn-outline-secondary w-100 mt-2">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        async function updateCurrentPrice() {
+            const select = document.getElementById('CryptocurrencyId');
+            const option = select.options[select.selectedIndex];
+            if (!option) return;
+
+            const coinId = option.getAttribute('data-coingecko-id');
+            if (!coinId) return;
+
+            try {
+                const response = await fetch(`/Crypto/GetPrice/${coinId}`);
+                const data = await response.json();
+                if (data.price) {
+                    document.getElementById('PriceAtTime').value = data.price.toFixed(2);
+                }
+            } catch (error) {
+                console.error('Error fetching price:', error);
+            }
+        }
+    </script>
+}

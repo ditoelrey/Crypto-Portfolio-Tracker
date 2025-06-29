@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\CryptoApplication",
+    "\\CryptoApplication\\CryptoApp.Domain",
+    "\\CryptoApplication\\CryptoApp.Domain\\Models",
+    "\\CryptoApplication\\CryptoApp.Domain\\Models\\Identity"
+  ],
+  "SelectedNode": "\\CryptoApplication\\CryptoApp.sln",
+  "PreviewInSolutionExplorer": false
+}

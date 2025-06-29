@@ -1,0 +1,1063 @@
+info: CryptoApp.Infrastructure.Services.CryptoPriceUpdateService[0]
+      Performing initial price load
+warn: Microsoft.EntityFrameworkCore.Model.Validation[10400]
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+warn: Microsoft.EntityFrameworkCore.Model.Validation[30000]
+      No store type was specified for the decimal property 'PurchasePrice' on entity type 'Holding'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\dimit\source\repos\CryptoApplicationbezUs\CryptoApplication\CryptoApp.Web
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (59ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+info: System.Net.Http.HttpClient.ICryptoFetchService.LogicalHandler[100]
+      Start processing HTTP request GET https://api.coingecko.com/api/v3/simple/price?*
+info: System.Net.Http.HttpClient.ICryptoFetchService.ClientHandler[100]
+      Sending HTTP request GET https://api.coingecko.com/api/v3/simple/price?*
+info: System.Net.Http.HttpClient.ICryptoFetchService.ClientHandler[101]
+      Received HTTP response headers after 422.9908ms - 200
+info: System.Net.Http.HttpClient.ICryptoFetchService.LogicalHandler[101]
+      End processing HTTP request after 455.2666ms - 200
+info: CryptoApp.Infrastructure.Services.CryptoPriceCacheService[0]
+      Refreshed prices for 8 coins
+info: CryptoApp.Infrastructure.Services.CryptoPriceUpdateService[0]
+      Completed price update cycle for 8 cryptocurrencies
+info: CryptoApp.Infrastructure.Services.CryptoPriceUpdateService[0]
+      Initial price load completed
+info: CryptoApp.Infrastructure.Services.CryptoPriceUpdateService[0]
+      Starting scheduled price update cycle
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+info: CryptoApp.Infrastructure.Services.CryptoPriceUpdateService[0]
+      Completed price update cycle for 8 cryptocurrencies
+info: CryptoApp.Infrastructure.Services.CryptoPriceUpdateService[0]
+      Price update cycle completed
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (42ms) [Parameters=[@__normalizedUserName_0='DIMITAR2003SR@GMAIL.COM' (Size = 256)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='DIMITAR2003SR@GMAIL.COM' (Size = 256)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='DIMITAR2003SR@GMAIL.COM' (Size = 256)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='DIMITAR2003SR@GMAIL.COM' (Size = 256)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='TESTTEST@GMAIL.COM' (Size = 256)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='AACAX@GMAIL.COM' (Size = 256)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (46ms) [Parameters=[@p0='f9eef964-cc77-4722-b690-84da55f41fb3' (Nullable = false) (Size = 450), @p1='0', @p2='dsad' (Nullable = false) (Size = 4000), @p3='16b75675-9802-43fb-ab76-e5c21df83f42' (Size = 4000), @p4='aacax@gmail.com' (Size = 256), @p5='False', @p6='asd' (Nullable = false) (Size = 4000), @p7='asd' (Nullable = false) (Size = 4000), @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='AACAX@GMAIL.COM' (Size = 256), @p11='AACAX@GMAIL.COM' (Size = 256), @p12='AQAAAAIAAYagAAAAEIbfzgai1xsNKOjqE9xiyM7zJkOd6X86L6eNY/6mSOBsHHP6TiQUnKpIM/tESCmAiw==' (Size = 4000), @p13=NULL (Size = 4000), @p14='False', @p15='VPD4W2JOL4OOZ5AVCWYZYAEZILOXYOG4' (Size = 4000), @p16='False', @p17='aacax@gmail.com' (Size = 256)], CommandType='Text', CommandTimeout='30']
+      SET IMPLICIT_TRANSACTIONS OFF;
+      SET NOCOUNT ON;
+      INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);
+info: CryptoApp.Web.Areas.Identity.Pages.Account.RegisterModel[0]
+      User created a new account with password.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='AACAX@GMAIL.COM' (Size = 256)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (19ms) [Parameters=[@p17='f9eef964-cc77-4722-b690-84da55f41fb3' (Nullable = false) (Size = 450), @p0='0', @p1='dsad' (Nullable = false) (Size = 4000), @p2='95dd10ba-60d0-4cbe-9d92-141cf405210f' (Size = 4000), @p18='16b75675-9802-43fb-ab76-e5c21df83f42' (Size = 4000), @p3='aacax@gmail.com' (Size = 256), @p4='False', @p5='asd' (Nullable = false) (Size = 4000), @p6='asd' (Nullable = false) (Size = 4000), @p7='True', @p8=NULL (DbType = DateTimeOffset), @p9='AACAX@GMAIL.COM' (Size = 256), @p10='AACAX@GMAIL.COM' (Size = 256), @p11='AQAAAAIAAYagAAAAEIbfzgai1xsNKOjqE9xiyM7zJkOd6X86L6eNY/6mSOBsHHP6TiQUnKpIM/tESCmAiw==' (Size = 4000), @p12=NULL (Size = 4000), @p13='False', @p14='VPD4W2JOL4OOZ5AVCWYZYAEZILOXYOG4' (Size = 4000), @p15='False', @p16='aacax@gmail.com' (Size = 256), @p19='75170504-87e4-4dc8-b52a-cd942c27da2c' (Nullable = false) (Size = 450), @p20='0001-01-01T00:00:00.0000000', @p21='asd's Portfolio' (Nullable = false) (Size = 4000), @p22=NULL (DbType = DateTime2), @p23='f9eef964-cc77-4722-b690-84da55f41fb3' (Nullable = false) (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [Address] = @p1, [ConcurrencyStamp] = @p2, [Email] = @p3, [EmailConfirmed] = @p4, [FirstName] = @p5, [LastName] = @p6, [LockoutEnabled] = @p7, [LockoutEnd] = @p8, [NormalizedEmail] = @p9, [NormalizedUserName] = @p10, [PasswordHash] = @p11, [PhoneNumber] = @p12, [PhoneNumberConfirmed] = @p13, [SecurityStamp] = @p14, [TwoFactorEnabled] = @p15, [UserName] = @p16
+      OUTPUT 1
+      WHERE [Id] = @p17 AND [ConcurrencyStamp] = @p18;
+      INSERT INTO [Portfolios] ([Id], [CreatedAt], [Name], [UpdatedAt], [UserId])
+      VALUES (@p19, @p20, @p21, @p22, @p23);
+info: CryptoApp.Web.Areas.Identity.Pages.Account.RegisterModel[0]
+      Created portfolio for user.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__user_Id_0='f9eef964-cc77-4722-b690-84da55f41fb3' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+      FROM [AspNetUserClaims] AS [a]
+      WHERE [a].[UserId] = @__user_Id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__userId_0='f9eef964-cc77-4722-b690-84da55f41fb3' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [a0].[Name]
+      FROM [AspNetUserRoles] AS [a]
+      INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+      WHERE [a].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='f9eef964-cc77-4722-b690-84da55f41fb3' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[Id] = @__p_0
+warn: Microsoft.EntityFrameworkCore.Query[20504]
+      Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (24ms) [Parameters=[@__id_0='f9eef964-cc77-4722-b690-84da55f41fb3' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [s].[Id], [s].[AccessFailedCount], [s].[Address], [s].[ConcurrencyStamp], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[LastName], [s].[LockoutEnabled], [s].[LockoutEnd], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[PhoneNumber], [s].[PhoneNumberConfirmed], [s].[SecurityStamp], [s].[TwoFactorEnabled], [s].[UserName], [s].[Id0], [s].[CreatedAt], [s].[Name], [s].[UpdatedAt], [s].[UserId], [s0].[Id], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[PortfolioId], [s0].[PurchaseDate], [s0].[PurchasePrice], [s0].[Quantity], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0], [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt]
+      FROM (
+          SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [p].[Id] AS [Id0], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [AspNetUsers] AS [a]
+          LEFT JOIN [Portfolios] AS [p] ON [a].[Id] = [p].[UserId]
+          WHERE [a].[Id] = @__id_0
+      ) AS [s]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s0] ON [s].[Id0] = [s0].[PortfolioId]
+      LEFT JOIN [Transactions] AS [t] ON [s].[Id0] = [t].[PortfolioId]
+      ORDER BY [s].[Id], [s].[Id0], [s0].[Id], [s0].[Id0]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating prices for coins: ripple, ethereum, polkadot, binancecoin, solana, bitcoin, cardano, dogecoin
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating XRP (ripple) price to: $2.19
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating ETH (ethereum) price to: $2422.19
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating DOT (polkadot) price to: $3.36
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating BNB (binancecoin) price to: $647.28
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating SOL (solana) price to: $143.87
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating BTC (bitcoin) price to: $107466
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating ADA (cardano) price to: $0.568014
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating DOGE (dogecoin) price to: $0.164767
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (19ms) [Parameters=[@p6='472f090a-3529-4de6-b673-86ae04963516' (Nullable = false) (Size = 450), @p0='ripple' (Nullable = false) (Size = 4000), @p1='2025-06-12T16:16:57.7996360', @p2='2.19' (Precision = 18) (Scale = 8), @p3='XRP' (Nullable = false) (Size = 4000), @p4='XRP' (Nullable = false) (Size = 4000), @p5='2025-06-12T17:12:31.4169288' (Nullable = true), @p13='73fad6fd-e344-426c-958a-e5fec2804cb2' (Nullable = false) (Size = 450), @p7='ethereum' (Nullable = false) (Size = 4000), @p8='2025-06-12T16:16:57.7996354', @p9='2422.19' (Precision = 18) (Scale = 8), @p10='Ethereum' (Nullable = false) (Size = 4000), @p11='ETH' (Nullable = false) (Size = 4000), @p12='2025-06-12T17:12:31.4169726' (Nullable = true), @p20='8b2a2c40-b70e-4323-817b-fe26ec22e594' (Nullable = false) (Size = 450), @p14='polkadot' (Nullable = false) (Size = 4000), @p15='2025-06-12T16:16:57.7996365', @p16='3.36' (Precision = 18) (Scale = 8), @p17='Polkadot' (Nullable = false) (Size = 4000), @p18='DOT' (Nullable = false) (Size = 4000), @p19='2025-06-12T17:12:31.4169729' (Nullable = true), @p27='92300974-aedd-473e-b5ac-3a4f3a505da5' (Nullable = false) (Size = 450), @p21='binancecoin' (Nullable = false) (Size = 4000), @p22='2025-06-12T16:16:57.7996357', @p23='647.28' (Precision = 18) (Scale = 8), @p24='BNB' (Nullable = false) (Size = 4000), @p25='BNB' (Nullable = false) (Size = 4000), @p26='2025-06-12T17:12:31.4169741' (Nullable = true), @p34='9c8b1ce7-226b-4f54-a6c6-7decef6b0f04' (Nullable = false) (Size = 450), @p28='solana' (Nullable = false) (Size = 4000), @p29='2025-06-12T16:16:57.7996363', @p30='143.87' (Precision = 18) (Scale = 8), @p31='Solana' (Nullable = false) (Size = 4000), @p32='SOL' (Nullable = false) (Size = 4000), @p33='2025-06-12T17:12:31.4169745' (Nullable = true), @p41='dba570ed-e7b1-4c4a-a074-f57c2d93ba7c' (Nullable = false) (Size = 450), @p35='bitcoin' (Nullable = false) (Size = 4000), @p36='2025-06-12T16:16:57.7996061', @p37='107466' (Precision = 18) (Scale = 8), @p38='Bitcoin' (Nullable = false) (Size = 4000), @p39='BTC' (Nullable = false) (Size = 4000), @p40='2025-06-12T17:12:31.4169748' (Nullable = true), @p48='f9f290ce-ab38-4292-a108-910f0065a49c' (Nullable = false) (Size = 450), @p42='cardano' (Nullable = false) (Size = 4000), @p43='2025-06-12T16:16:57.7996361', @p44='0.568014' (Precision = 18) (Scale = 8), @p45='Cardano' (Nullable = false) (Size = 4000), @p46='ADA' (Nullable = false) (Size = 4000), @p47='2025-06-12T17:12:31.4169752' (Nullable = true), @p55='fa7ed3ec-7b27-45c7-9b06-b9bfe469ee4e' (Nullable = false) (Size = 450), @p49='dogecoin' (Nullable = false) (Size = 4000), @p50='2025-06-12T16:16:57.7996367', @p51='0.164767' (Precision = 18) (Scale = 8), @p52='Dogecoin' (Nullable = false) (Size = 4000), @p53='DOGE' (Nullable = false) (Size = 4000), @p54='2025-06-12T17:12:31.4169754' (Nullable = true)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p0, [CreatedAt] = @p1, [CurrentPrice] = @p2, [Name] = @p3, [Symbol] = @p4, [UpdatedAt] = @p5
+      OUTPUT 1
+      WHERE [Id] = @p6;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p7, [CreatedAt] = @p8, [CurrentPrice] = @p9, [Name] = @p10, [Symbol] = @p11, [UpdatedAt] = @p12
+      OUTPUT 1
+      WHERE [Id] = @p13;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p14, [CreatedAt] = @p15, [CurrentPrice] = @p16, [Name] = @p17, [Symbol] = @p18, [UpdatedAt] = @p19
+      OUTPUT 1
+      WHERE [Id] = @p20;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p21, [CreatedAt] = @p22, [CurrentPrice] = @p23, [Name] = @p24, [Symbol] = @p25, [UpdatedAt] = @p26
+      OUTPUT 1
+      WHERE [Id] = @p27;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p28, [CreatedAt] = @p29, [CurrentPrice] = @p30, [Name] = @p31, [Symbol] = @p32, [UpdatedAt] = @p33
+      OUTPUT 1
+      WHERE [Id] = @p34;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p35, [CreatedAt] = @p36, [CurrentPrice] = @p37, [Name] = @p38, [Symbol] = @p39, [UpdatedAt] = @p40
+      OUTPUT 1
+      WHERE [Id] = @p41;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p42, [CreatedAt] = @p43, [CurrentPrice] = @p44, [Name] = @p45, [Symbol] = @p46, [UpdatedAt] = @p47
+      OUTPUT 1
+      WHERE [Id] = @p48;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p49, [CreatedAt] = @p50, [CurrentPrice] = @p51, [Name] = @p52, [Symbol] = @p53, [UpdatedAt] = @p54
+      OUTPUT 1
+      WHERE [Id] = @p55;
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Price update completed
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='f9eef964-cc77-4722-b690-84da55f41fb3' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (16ms) [Parameters=[@__id_0='f9eef964-cc77-4722-b690-84da55f41fb3' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [s].[Id], [s].[AccessFailedCount], [s].[Address], [s].[ConcurrencyStamp], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[LastName], [s].[LockoutEnabled], [s].[LockoutEnd], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[PhoneNumber], [s].[PhoneNumberConfirmed], [s].[SecurityStamp], [s].[TwoFactorEnabled], [s].[UserName], [s].[Id0], [s].[CreatedAt], [s].[Name], [s].[UpdatedAt], [s].[UserId], [s0].[Id], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[PortfolioId], [s0].[PurchaseDate], [s0].[PurchasePrice], [s0].[Quantity], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0], [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt]
+      FROM (
+          SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [p].[Id] AS [Id0], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [AspNetUsers] AS [a]
+          LEFT JOIN [Portfolios] AS [p] ON [a].[Id] = [p].[UserId]
+          WHERE [a].[Id] = @__id_0
+      ) AS [s]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s0] ON [s].[Id0] = [s0].[PortfolioId]
+      LEFT JOIN [Transactions] AS [t] ON [s].[Id0] = [t].[PortfolioId]
+      ORDER BY [s].[Id], [s].[Id0], [s0].[Id], [s0].[Id0]
+warn: Microsoft.EntityFrameworkCore.Query[20504]
+      Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (40ms) [Parameters=[@__portfolioId_0='75170504-87e4-4dc8-b52a-cd942c27da2c' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [p0].[Id], [p0].[CreatedAt], [p0].[Name], [p0].[UpdatedAt], [p0].[UserId], [s].[Id], [s].[CreatedAt], [s].[CryptocurrencyId], [s].[PortfolioId], [s].[PurchaseDate], [s].[PurchasePrice], [s].[Quantity], [s].[UpdatedAt], [s].[Id0], [s].[CoinGeckoId], [s].[CreatedAt0], [s].[CurrentPrice], [s].[Name], [s].[Symbol], [s].[UpdatedAt0], [s0].[Id], [s0].[Amount], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[Date], [s0].[PortfolioId], [s0].[PriceAtTime], [s0].[Type], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0]
+      FROM (
+          SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [Portfolios] AS [p]
+          WHERE [p].[Id] = @__portfolioId_0
+      ) AS [p0]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s] ON [p0].[Id] = [s].[PortfolioId]
+      LEFT JOIN (
+          SELECT [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt], [c0].[Id] AS [Id0], [c0].[CoinGeckoId], [c0].[CreatedAt] AS [CreatedAt0], [c0].[CurrentPrice], [c0].[Name], [c0].[Symbol], [c0].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Transactions] AS [t]
+          INNER JOIN [Cryptocurrencies] AS [c0] ON [t].[CryptocurrencyId] = [c0].[Id]
+      ) AS [s0] ON [p0].[Id] = [s0].[PortfolioId]
+      ORDER BY [p0].[Id], [s].[Id], [s].[Id0], [s0].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='f9eef964-cc77-4722-b690-84da55f41fb3' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[@__portfolioId_0='75170504-87e4-4dc8-b52a-cd942c27da2c' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [p0].[Id], [p0].[CreatedAt], [p0].[Name], [p0].[UpdatedAt], [p0].[UserId], [s].[Id], [s].[CreatedAt], [s].[CryptocurrencyId], [s].[PortfolioId], [s].[PurchaseDate], [s].[PurchasePrice], [s].[Quantity], [s].[UpdatedAt], [s].[Id0], [s].[CoinGeckoId], [s].[CreatedAt0], [s].[CurrentPrice], [s].[Name], [s].[Symbol], [s].[UpdatedAt0], [s0].[Id], [s0].[Amount], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[Date], [s0].[PortfolioId], [s0].[PriceAtTime], [s0].[Type], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0]
+      FROM (
+          SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [Portfolios] AS [p]
+          WHERE [p].[Id] = @__portfolioId_0
+      ) AS [p0]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s] ON [p0].[Id] = [s].[PortfolioId]
+      LEFT JOIN (
+          SELECT [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt], [c0].[Id] AS [Id0], [c0].[CoinGeckoId], [c0].[CreatedAt] AS [CreatedAt0], [c0].[CurrentPrice], [c0].[Name], [c0].[Symbol], [c0].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Transactions] AS [t]
+          INNER JOIN [Cryptocurrencies] AS [c0] ON [t].[CryptocurrencyId] = [c0].[Id]
+      ) AS [s0] ON [p0].[Id] = [s0].[PortfolioId]
+      ORDER BY [p0].[Id], [s].[Id], [s].[Id0], [s0].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (13ms) [Parameters=[@__id_0='f9eef964-cc77-4722-b690-84da55f41fb3' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [s].[Id], [s].[AccessFailedCount], [s].[Address], [s].[ConcurrencyStamp], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[LastName], [s].[LockoutEnabled], [s].[LockoutEnd], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[PhoneNumber], [s].[PhoneNumberConfirmed], [s].[SecurityStamp], [s].[TwoFactorEnabled], [s].[UserName], [s].[Id0], [s].[CreatedAt], [s].[Name], [s].[UpdatedAt], [s].[UserId], [s0].[Id], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[PortfolioId], [s0].[PurchaseDate], [s0].[PurchasePrice], [s0].[Quantity], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0], [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt]
+      FROM (
+          SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [p].[Id] AS [Id0], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [AspNetUsers] AS [a]
+          LEFT JOIN [Portfolios] AS [p] ON [a].[Id] = [p].[UserId]
+          WHERE [a].[Id] = @__id_0
+      ) AS [s]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s0] ON [s].[Id0] = [s0].[PortfolioId]
+      LEFT JOIN [Transactions] AS [t] ON [s].[Id0] = [t].[PortfolioId]
+      ORDER BY [s].[Id], [s].[Id0], [s0].[Id], [s0].[Id0]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating prices for coins: ripple, ethereum, polkadot, binancecoin, solana, bitcoin, cardano, dogecoin
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating XRP (ripple) price to: $2.19
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating ETH (ethereum) price to: $2422.19
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating DOT (polkadot) price to: $3.36
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating BNB (binancecoin) price to: $647.28
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating SOL (solana) price to: $143.87
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating BTC (bitcoin) price to: $107466
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating ADA (cardano) price to: $0.568014
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating DOGE (dogecoin) price to: $0.164767
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (11ms) [Parameters=[@p6='472f090a-3529-4de6-b673-86ae04963516' (Nullable = false) (Size = 450), @p0='ripple' (Nullable = false) (Size = 4000), @p1='2025-06-12T16:16:57.7996360', @p2='2.19' (Precision = 18) (Scale = 8), @p3='XRP' (Nullable = false) (Size = 4000), @p4='XRP' (Nullable = false) (Size = 4000), @p5='2025-06-12T17:12:31.4169288' (Nullable = true), @p13='73fad6fd-e344-426c-958a-e5fec2804cb2' (Nullable = false) (Size = 450), @p7='ethereum' (Nullable = false) (Size = 4000), @p8='2025-06-12T16:16:57.7996354', @p9='2422.19' (Precision = 18) (Scale = 8), @p10='Ethereum' (Nullable = false) (Size = 4000), @p11='ETH' (Nullable = false) (Size = 4000), @p12='2025-06-12T17:12:31.4169726' (Nullable = true), @p20='8b2a2c40-b70e-4323-817b-fe26ec22e594' (Nullable = false) (Size = 450), @p14='polkadot' (Nullable = false) (Size = 4000), @p15='2025-06-12T16:16:57.7996365', @p16='3.36' (Precision = 18) (Scale = 8), @p17='Polkadot' (Nullable = false) (Size = 4000), @p18='DOT' (Nullable = false) (Size = 4000), @p19='2025-06-12T17:12:31.4169729' (Nullable = true), @p27='92300974-aedd-473e-b5ac-3a4f3a505da5' (Nullable = false) (Size = 450), @p21='binancecoin' (Nullable = false) (Size = 4000), @p22='2025-06-12T16:16:57.7996357', @p23='647.28' (Precision = 18) (Scale = 8), @p24='BNB' (Nullable = false) (Size = 4000), @p25='BNB' (Nullable = false) (Size = 4000), @p26='2025-06-12T17:12:31.4169741' (Nullable = true), @p34='9c8b1ce7-226b-4f54-a6c6-7decef6b0f04' (Nullable = false) (Size = 450), @p28='solana' (Nullable = false) (Size = 4000), @p29='2025-06-12T16:16:57.7996363', @p30='143.87' (Precision = 18) (Scale = 8), @p31='Solana' (Nullable = false) (Size = 4000), @p32='SOL' (Nullable = false) (Size = 4000), @p33='2025-06-12T17:12:31.4169745' (Nullable = true), @p41='dba570ed-e7b1-4c4a-a074-f57c2d93ba7c' (Nullable = false) (Size = 450), @p35='bitcoin' (Nullable = false) (Size = 4000), @p36='2025-06-12T16:16:57.7996061', @p37='107466' (Precision = 18) (Scale = 8), @p38='Bitcoin' (Nullable = false) (Size = 4000), @p39='BTC' (Nullable = false) (Size = 4000), @p40='2025-06-12T17:12:31.4169748' (Nullable = true), @p48='f9f290ce-ab38-4292-a108-910f0065a49c' (Nullable = false) (Size = 450), @p42='cardano' (Nullable = false) (Size = 4000), @p43='2025-06-12T16:16:57.7996361', @p44='0.568014' (Precision = 18) (Scale = 8), @p45='Cardano' (Nullable = false) (Size = 4000), @p46='ADA' (Nullable = false) (Size = 4000), @p47='2025-06-12T17:12:31.4169752' (Nullable = true), @p55='fa7ed3ec-7b27-45c7-9b06-b9bfe469ee4e' (Nullable = false) (Size = 450), @p49='dogecoin' (Nullable = false) (Size = 4000), @p50='2025-06-12T16:16:57.7996367', @p51='0.164767' (Precision = 18) (Scale = 8), @p52='Dogecoin' (Nullable = false) (Size = 4000), @p53='DOGE' (Nullable = false) (Size = 4000), @p54='2025-06-12T17:12:31.4169754' (Nullable = true)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p0, [CreatedAt] = @p1, [CurrentPrice] = @p2, [Name] = @p3, [Symbol] = @p4, [UpdatedAt] = @p5
+      OUTPUT 1
+      WHERE [Id] = @p6;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p7, [CreatedAt] = @p8, [CurrentPrice] = @p9, [Name] = @p10, [Symbol] = @p11, [UpdatedAt] = @p12
+      OUTPUT 1
+      WHERE [Id] = @p13;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p14, [CreatedAt] = @p15, [CurrentPrice] = @p16, [Name] = @p17, [Symbol] = @p18, [UpdatedAt] = @p19
+      OUTPUT 1
+      WHERE [Id] = @p20;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p21, [CreatedAt] = @p22, [CurrentPrice] = @p23, [Name] = @p24, [Symbol] = @p25, [UpdatedAt] = @p26
+      OUTPUT 1
+      WHERE [Id] = @p27;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p28, [CreatedAt] = @p29, [CurrentPrice] = @p30, [Name] = @p31, [Symbol] = @p32, [UpdatedAt] = @p33
+      OUTPUT 1
+      WHERE [Id] = @p34;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p35, [CreatedAt] = @p36, [CurrentPrice] = @p37, [Name] = @p38, [Symbol] = @p39, [UpdatedAt] = @p40
+      OUTPUT 1
+      WHERE [Id] = @p41;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p42, [CreatedAt] = @p43, [CurrentPrice] = @p44, [Name] = @p45, [Symbol] = @p46, [UpdatedAt] = @p47
+      OUTPUT 1
+      WHERE [Id] = @p48;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p49, [CreatedAt] = @p50, [CurrentPrice] = @p51, [Name] = @p52, [Symbol] = @p53, [UpdatedAt] = @p54
+      OUTPUT 1
+      WHERE [Id] = @p55;
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Price update completed
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='f9eef964-cc77-4722-b690-84da55f41fb3' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[Id] = @__p_0
+info: CryptoApp.Web.Pages.Account.LogoutModel[0]
+      User logged out.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='DIMITAR2003SR@GMAIL.COM' (Size = 256)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__user_Id_0='a49143cb-a58a-4b4d-a65f-5f2c124b0899' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+      FROM [AspNetUserClaims] AS [a]
+      WHERE [a].[UserId] = @__user_Id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__userId_0='a49143cb-a58a-4b4d-a65f-5f2c124b0899' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [a0].[Name]
+      FROM [AspNetUserRoles] AS [a]
+      INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+      WHERE [a].[UserId] = @__userId_0
+info: CryptoApp.Web.Pages.Account.LoginModel[0]
+      User logged in.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='a49143cb-a58a-4b4d-a65f-5f2c124b0899' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (38ms) [Parameters=[@__id_0='a49143cb-a58a-4b4d-a65f-5f2c124b0899' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [s].[Id], [s].[AccessFailedCount], [s].[Address], [s].[ConcurrencyStamp], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[LastName], [s].[LockoutEnabled], [s].[LockoutEnd], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[PhoneNumber], [s].[PhoneNumberConfirmed], [s].[SecurityStamp], [s].[TwoFactorEnabled], [s].[UserName], [s].[Id0], [s].[CreatedAt], [s].[Name], [s].[UpdatedAt], [s].[UserId], [s0].[Id], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[PortfolioId], [s0].[PurchaseDate], [s0].[PurchasePrice], [s0].[Quantity], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0], [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt]
+      FROM (
+          SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [p].[Id] AS [Id0], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [AspNetUsers] AS [a]
+          LEFT JOIN [Portfolios] AS [p] ON [a].[Id] = [p].[UserId]
+          WHERE [a].[Id] = @__id_0
+      ) AS [s]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s0] ON [s].[Id0] = [s0].[PortfolioId]
+      LEFT JOIN [Transactions] AS [t] ON [s].[Id0] = [t].[PortfolioId]
+      ORDER BY [s].[Id], [s].[Id0], [s0].[Id], [s0].[Id0]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating prices for coins: ripple, ethereum, polkadot, binancecoin, solana, bitcoin, cardano, dogecoin
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating XRP (ripple) price to: $2.19
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating ETH (ethereum) price to: $2422.19
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating DOT (polkadot) price to: $3.36
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating BNB (binancecoin) price to: $647.28
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating SOL (solana) price to: $143.87
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating BTC (bitcoin) price to: $107466
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating ADA (cardano) price to: $0.568014
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating DOGE (dogecoin) price to: $0.164767
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (42ms) [Parameters=[@p6='472f090a-3529-4de6-b673-86ae04963516' (Nullable = false) (Size = 450), @p0='ripple' (Nullable = false) (Size = 4000), @p1='2025-06-12T16:16:57.7996360', @p2='2.19' (Precision = 18) (Scale = 8), @p3='XRP' (Nullable = false) (Size = 4000), @p4='XRP' (Nullable = false) (Size = 4000), @p5='2025-06-12T17:12:31.4169288' (Nullable = true), @p13='73fad6fd-e344-426c-958a-e5fec2804cb2' (Nullable = false) (Size = 450), @p7='ethereum' (Nullable = false) (Size = 4000), @p8='2025-06-12T16:16:57.7996354', @p9='2422.19' (Precision = 18) (Scale = 8), @p10='Ethereum' (Nullable = false) (Size = 4000), @p11='ETH' (Nullable = false) (Size = 4000), @p12='2025-06-12T17:12:31.4169726' (Nullable = true), @p20='8b2a2c40-b70e-4323-817b-fe26ec22e594' (Nullable = false) (Size = 450), @p14='polkadot' (Nullable = false) (Size = 4000), @p15='2025-06-12T16:16:57.7996365', @p16='3.36' (Precision = 18) (Scale = 8), @p17='Polkadot' (Nullable = false) (Size = 4000), @p18='DOT' (Nullable = false) (Size = 4000), @p19='2025-06-12T17:12:31.4169729' (Nullable = true), @p27='92300974-aedd-473e-b5ac-3a4f3a505da5' (Nullable = false) (Size = 450), @p21='binancecoin' (Nullable = false) (Size = 4000), @p22='2025-06-12T16:16:57.7996357', @p23='647.28' (Precision = 18) (Scale = 8), @p24='BNB' (Nullable = false) (Size = 4000), @p25='BNB' (Nullable = false) (Size = 4000), @p26='2025-06-12T17:12:31.4169741' (Nullable = true), @p34='9c8b1ce7-226b-4f54-a6c6-7decef6b0f04' (Nullable = false) (Size = 450), @p28='solana' (Nullable = false) (Size = 4000), @p29='2025-06-12T16:16:57.7996363', @p30='143.87' (Precision = 18) (Scale = 8), @p31='Solana' (Nullable = false) (Size = 4000), @p32='SOL' (Nullable = false) (Size = 4000), @p33='2025-06-12T17:12:31.4169745' (Nullable = true), @p41='dba570ed-e7b1-4c4a-a074-f57c2d93ba7c' (Nullable = false) (Size = 450), @p35='bitcoin' (Nullable = false) (Size = 4000), @p36='2025-06-12T16:16:57.7996061', @p37='107466' (Precision = 18) (Scale = 8), @p38='Bitcoin' (Nullable = false) (Size = 4000), @p39='BTC' (Nullable = false) (Size = 4000), @p40='2025-06-12T17:12:31.4169748' (Nullable = true), @p48='f9f290ce-ab38-4292-a108-910f0065a49c' (Nullable = false) (Size = 450), @p42='cardano' (Nullable = false) (Size = 4000), @p43='2025-06-12T16:16:57.7996361', @p44='0.568014' (Precision = 18) (Scale = 8), @p45='Cardano' (Nullable = false) (Size = 4000), @p46='ADA' (Nullable = false) (Size = 4000), @p47='2025-06-12T17:12:31.4169752' (Nullable = true), @p55='fa7ed3ec-7b27-45c7-9b06-b9bfe469ee4e' (Nullable = false) (Size = 450), @p49='dogecoin' (Nullable = false) (Size = 4000), @p50='2025-06-12T16:16:57.7996367', @p51='0.164767' (Precision = 18) (Scale = 8), @p52='Dogecoin' (Nullable = false) (Size = 4000), @p53='DOGE' (Nullable = false) (Size = 4000), @p54='2025-06-12T17:12:31.4169754' (Nullable = true)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p0, [CreatedAt] = @p1, [CurrentPrice] = @p2, [Name] = @p3, [Symbol] = @p4, [UpdatedAt] = @p5
+      OUTPUT 1
+      WHERE [Id] = @p6;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p7, [CreatedAt] = @p8, [CurrentPrice] = @p9, [Name] = @p10, [Symbol] = @p11, [UpdatedAt] = @p12
+      OUTPUT 1
+      WHERE [Id] = @p13;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p14, [CreatedAt] = @p15, [CurrentPrice] = @p16, [Name] = @p17, [Symbol] = @p18, [UpdatedAt] = @p19
+      OUTPUT 1
+      WHERE [Id] = @p20;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p21, [CreatedAt] = @p22, [CurrentPrice] = @p23, [Name] = @p24, [Symbol] = @p25, [UpdatedAt] = @p26
+      OUTPUT 1
+      WHERE [Id] = @p27;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p28, [CreatedAt] = @p29, [CurrentPrice] = @p30, [Name] = @p31, [Symbol] = @p32, [UpdatedAt] = @p33
+      OUTPUT 1
+      WHERE [Id] = @p34;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p35, [CreatedAt] = @p36, [CurrentPrice] = @p37, [Name] = @p38, [Symbol] = @p39, [UpdatedAt] = @p40
+      OUTPUT 1
+      WHERE [Id] = @p41;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p42, [CreatedAt] = @p43, [CurrentPrice] = @p44, [Name] = @p45, [Symbol] = @p46, [UpdatedAt] = @p47
+      OUTPUT 1
+      WHERE [Id] = @p48;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p49, [CreatedAt] = @p50, [CurrentPrice] = @p51, [Name] = @p52, [Symbol] = @p53, [UpdatedAt] = @p54
+      OUTPUT 1
+      WHERE [Id] = @p55;
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Price update completed
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='a49143cb-a58a-4b4d-a65f-5f2c124b0899' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (13ms) [Parameters=[@__id_0='a49143cb-a58a-4b4d-a65f-5f2c124b0899' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [s].[Id], [s].[AccessFailedCount], [s].[Address], [s].[ConcurrencyStamp], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[LastName], [s].[LockoutEnabled], [s].[LockoutEnd], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[PhoneNumber], [s].[PhoneNumberConfirmed], [s].[SecurityStamp], [s].[TwoFactorEnabled], [s].[UserName], [s].[Id0], [s].[CreatedAt], [s].[Name], [s].[UpdatedAt], [s].[UserId], [s0].[Id], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[PortfolioId], [s0].[PurchaseDate], [s0].[PurchasePrice], [s0].[Quantity], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0], [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt]
+      FROM (
+          SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [p].[Id] AS [Id0], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [AspNetUsers] AS [a]
+          LEFT JOIN [Portfolios] AS [p] ON [a].[Id] = [p].[UserId]
+          WHERE [a].[Id] = @__id_0
+      ) AS [s]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s0] ON [s].[Id0] = [s0].[PortfolioId]
+      LEFT JOIN [Transactions] AS [t] ON [s].[Id0] = [t].[PortfolioId]
+      ORDER BY [s].[Id], [s].[Id0], [s0].[Id], [s0].[Id0]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (13ms) [Parameters=[@__portfolioId_0='08c65af4-b651-4db9-8419-46ec17f0be44' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [p0].[Id], [p0].[CreatedAt], [p0].[Name], [p0].[UpdatedAt], [p0].[UserId], [s].[Id], [s].[CreatedAt], [s].[CryptocurrencyId], [s].[PortfolioId], [s].[PurchaseDate], [s].[PurchasePrice], [s].[Quantity], [s].[UpdatedAt], [s].[Id0], [s].[CoinGeckoId], [s].[CreatedAt0], [s].[CurrentPrice], [s].[Name], [s].[Symbol], [s].[UpdatedAt0], [s0].[Id], [s0].[Amount], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[Date], [s0].[PortfolioId], [s0].[PriceAtTime], [s0].[Type], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0]
+      FROM (
+          SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [Portfolios] AS [p]
+          WHERE [p].[Id] = @__portfolioId_0
+      ) AS [p0]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s] ON [p0].[Id] = [s].[PortfolioId]
+      LEFT JOIN (
+          SELECT [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt], [c0].[Id] AS [Id0], [c0].[CoinGeckoId], [c0].[CreatedAt] AS [CreatedAt0], [c0].[CurrentPrice], [c0].[Name], [c0].[Symbol], [c0].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Transactions] AS [t]
+          INNER JOIN [Cryptocurrencies] AS [c0] ON [t].[CryptocurrencyId] = [c0].[Id]
+      ) AS [s0] ON [p0].[Id] = [s0].[PortfolioId]
+      ORDER BY [p0].[Id], [s].[Id], [s].[Id0], [s0].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='a49143cb-a58a-4b4d-a65f-5f2c124b0899' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (16ms) [Parameters=[@__portfolioId_0='08c65af4-b651-4db9-8419-46ec17f0be44' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [p0].[Id], [p0].[CreatedAt], [p0].[Name], [p0].[UpdatedAt], [p0].[UserId], [s].[Id], [s].[CreatedAt], [s].[CryptocurrencyId], [s].[PortfolioId], [s].[PurchaseDate], [s].[PurchasePrice], [s].[Quantity], [s].[UpdatedAt], [s].[Id0], [s].[CoinGeckoId], [s].[CreatedAt0], [s].[CurrentPrice], [s].[Name], [s].[Symbol], [s].[UpdatedAt0], [s0].[Id], [s0].[Amount], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[Date], [s0].[PortfolioId], [s0].[PriceAtTime], [s0].[Type], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0]
+      FROM (
+          SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [Portfolios] AS [p]
+          WHERE [p].[Id] = @__portfolioId_0
+      ) AS [p0]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s] ON [p0].[Id] = [s].[PortfolioId]
+      LEFT JOIN (
+          SELECT [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt], [c0].[Id] AS [Id0], [c0].[CoinGeckoId], [c0].[CreatedAt] AS [CreatedAt0], [c0].[CurrentPrice], [c0].[Name], [c0].[Symbol], [c0].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Transactions] AS [t]
+          INNER JOIN [Cryptocurrencies] AS [c0] ON [t].[CryptocurrencyId] = [c0].[Id]
+      ) AS [s0] ON [p0].[Id] = [s0].[PortfolioId]
+      ORDER BY [p0].[Id], [s].[Id], [s].[Id0], [s0].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (20ms) [Parameters=[@__id_0='a49143cb-a58a-4b4d-a65f-5f2c124b0899' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [s].[Id], [s].[AccessFailedCount], [s].[Address], [s].[ConcurrencyStamp], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[LastName], [s].[LockoutEnabled], [s].[LockoutEnd], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[PhoneNumber], [s].[PhoneNumberConfirmed], [s].[SecurityStamp], [s].[TwoFactorEnabled], [s].[UserName], [s].[Id0], [s].[CreatedAt], [s].[Name], [s].[UpdatedAt], [s].[UserId], [s0].[Id], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[PortfolioId], [s0].[PurchaseDate], [s0].[PurchasePrice], [s0].[Quantity], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0], [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt]
+      FROM (
+          SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [p].[Id] AS [Id0], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [AspNetUsers] AS [a]
+          LEFT JOIN [Portfolios] AS [p] ON [a].[Id] = [p].[UserId]
+          WHERE [a].[Id] = @__id_0
+      ) AS [s]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s0] ON [s].[Id0] = [s0].[PortfolioId]
+      LEFT JOIN [Transactions] AS [t] ON [s].[Id0] = [t].[PortfolioId]
+      ORDER BY [s].[Id], [s].[Id0], [s0].[Id], [s0].[Id0]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating prices for coins: ripple, ethereum, polkadot, binancecoin, solana, bitcoin, cardano, dogecoin
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating XRP (ripple) price to: $2.19
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating ETH (ethereum) price to: $2422.19
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating DOT (polkadot) price to: $3.36
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating BNB (binancecoin) price to: $647.28
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating SOL (solana) price to: $143.87
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating BTC (bitcoin) price to: $107466
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating ADA (cardano) price to: $0.568014
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating DOGE (dogecoin) price to: $0.164767
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[@p6='472f090a-3529-4de6-b673-86ae04963516' (Nullable = false) (Size = 450), @p0='ripple' (Nullable = false) (Size = 4000), @p1='2025-06-12T16:16:57.7996360', @p2='2.19' (Precision = 18) (Scale = 8), @p3='XRP' (Nullable = false) (Size = 4000), @p4='XRP' (Nullable = false) (Size = 4000), @p5='2025-06-12T17:12:31.4169288' (Nullable = true), @p13='73fad6fd-e344-426c-958a-e5fec2804cb2' (Nullable = false) (Size = 450), @p7='ethereum' (Nullable = false) (Size = 4000), @p8='2025-06-12T16:16:57.7996354', @p9='2422.19' (Precision = 18) (Scale = 8), @p10='Ethereum' (Nullable = false) (Size = 4000), @p11='ETH' (Nullable = false) (Size = 4000), @p12='2025-06-12T17:12:31.4169726' (Nullable = true), @p20='8b2a2c40-b70e-4323-817b-fe26ec22e594' (Nullable = false) (Size = 450), @p14='polkadot' (Nullable = false) (Size = 4000), @p15='2025-06-12T16:16:57.7996365', @p16='3.36' (Precision = 18) (Scale = 8), @p17='Polkadot' (Nullable = false) (Size = 4000), @p18='DOT' (Nullable = false) (Size = 4000), @p19='2025-06-12T17:12:31.4169729' (Nullable = true), @p27='92300974-aedd-473e-b5ac-3a4f3a505da5' (Nullable = false) (Size = 450), @p21='binancecoin' (Nullable = false) (Size = 4000), @p22='2025-06-12T16:16:57.7996357', @p23='647.28' (Precision = 18) (Scale = 8), @p24='BNB' (Nullable = false) (Size = 4000), @p25='BNB' (Nullable = false) (Size = 4000), @p26='2025-06-12T17:12:31.4169741' (Nullable = true), @p34='9c8b1ce7-226b-4f54-a6c6-7decef6b0f04' (Nullable = false) (Size = 450), @p28='solana' (Nullable = false) (Size = 4000), @p29='2025-06-12T16:16:57.7996363', @p30='143.87' (Precision = 18) (Scale = 8), @p31='Solana' (Nullable = false) (Size = 4000), @p32='SOL' (Nullable = false) (Size = 4000), @p33='2025-06-12T17:12:31.4169745' (Nullable = true), @p41='dba570ed-e7b1-4c4a-a074-f57c2d93ba7c' (Nullable = false) (Size = 450), @p35='bitcoin' (Nullable = false) (Size = 4000), @p36='2025-06-12T16:16:57.7996061', @p37='107466' (Precision = 18) (Scale = 8), @p38='Bitcoin' (Nullable = false) (Size = 4000), @p39='BTC' (Nullable = false) (Size = 4000), @p40='2025-06-12T17:12:31.4169748' (Nullable = true), @p48='f9f290ce-ab38-4292-a108-910f0065a49c' (Nullable = false) (Size = 450), @p42='cardano' (Nullable = false) (Size = 4000), @p43='2025-06-12T16:16:57.7996361', @p44='0.568014' (Precision = 18) (Scale = 8), @p45='Cardano' (Nullable = false) (Size = 4000), @p46='ADA' (Nullable = false) (Size = 4000), @p47='2025-06-12T17:12:31.4169752' (Nullable = true), @p55='fa7ed3ec-7b27-45c7-9b06-b9bfe469ee4e' (Nullable = false) (Size = 450), @p49='dogecoin' (Nullable = false) (Size = 4000), @p50='2025-06-12T16:16:57.7996367', @p51='0.164767' (Precision = 18) (Scale = 8), @p52='Dogecoin' (Nullable = false) (Size = 4000), @p53='DOGE' (Nullable = false) (Size = 4000), @p54='2025-06-12T17:12:31.4169754' (Nullable = true)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p0, [CreatedAt] = @p1, [CurrentPrice] = @p2, [Name] = @p3, [Symbol] = @p4, [UpdatedAt] = @p5
+      OUTPUT 1
+      WHERE [Id] = @p6;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p7, [CreatedAt] = @p8, [CurrentPrice] = @p9, [Name] = @p10, [Symbol] = @p11, [UpdatedAt] = @p12
+      OUTPUT 1
+      WHERE [Id] = @p13;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p14, [CreatedAt] = @p15, [CurrentPrice] = @p16, [Name] = @p17, [Symbol] = @p18, [UpdatedAt] = @p19
+      OUTPUT 1
+      WHERE [Id] = @p20;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p21, [CreatedAt] = @p22, [CurrentPrice] = @p23, [Name] = @p24, [Symbol] = @p25, [UpdatedAt] = @p26
+      OUTPUT 1
+      WHERE [Id] = @p27;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p28, [CreatedAt] = @p29, [CurrentPrice] = @p30, [Name] = @p31, [Symbol] = @p32, [UpdatedAt] = @p33
+      OUTPUT 1
+      WHERE [Id] = @p34;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p35, [CreatedAt] = @p36, [CurrentPrice] = @p37, [Name] = @p38, [Symbol] = @p39, [UpdatedAt] = @p40
+      OUTPUT 1
+      WHERE [Id] = @p41;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p42, [CreatedAt] = @p43, [CurrentPrice] = @p44, [Name] = @p45, [Symbol] = @p46, [UpdatedAt] = @p47
+      OUTPUT 1
+      WHERE [Id] = @p48;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p49, [CreatedAt] = @p50, [CurrentPrice] = @p51, [Name] = @p52, [Symbol] = @p53, [UpdatedAt] = @p54
+      OUTPUT 1
+      WHERE [Id] = @p55;
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Price update completed
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='a49143cb-a58a-4b4d-a65f-5f2c124b0899' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='08c65af4-b651-4db9-8419-46ec17f0be44' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+      FROM [Portfolios] AS [p]
+      WHERE [p].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='f9f290ce-ab38-4292-a108-910f0065a49c' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+      WHERE [c].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='a49143cb-a58a-4b4d-a65f-5f2c124b0899' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='08c65af4-b651-4db9-8419-46ec17f0be44' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+      FROM [Portfolios] AS [p]
+      WHERE [p].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='f9f290ce-ab38-4292-a108-910f0065a49c' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+      WHERE [c].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (39ms) [Parameters=[@__portfolioId_0='08c65af4-b651-4db9-8419-46ec17f0be44' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [p0].[Id], [p0].[CreatedAt], [p0].[Name], [p0].[UpdatedAt], [p0].[UserId], [s].[Id], [s].[CreatedAt], [s].[CryptocurrencyId], [s].[PortfolioId], [s].[PurchaseDate], [s].[PurchasePrice], [s].[Quantity], [s].[UpdatedAt], [s].[Id0], [s].[CoinGeckoId], [s].[CreatedAt0], [s].[CurrentPrice], [s].[Name], [s].[Symbol], [s].[UpdatedAt0], [s0].[Id], [s0].[Amount], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[Date], [s0].[PortfolioId], [s0].[PriceAtTime], [s0].[Type], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0]
+      FROM (
+          SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [Portfolios] AS [p]
+          WHERE [p].[Id] = @__portfolioId_0
+      ) AS [p0]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s] ON [p0].[Id] = [s].[PortfolioId]
+      LEFT JOIN (
+          SELECT [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt], [c0].[Id] AS [Id0], [c0].[CoinGeckoId], [c0].[CreatedAt] AS [CreatedAt0], [c0].[CurrentPrice], [c0].[Name], [c0].[Symbol], [c0].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Transactions] AS [t]
+          INNER JOIN [Cryptocurrencies] AS [c0] ON [t].[CryptocurrencyId] = [c0].[Id]
+      ) AS [s0] ON [p0].[Id] = [s0].[PortfolioId]
+      ORDER BY [p0].[Id], [s].[Id], [s].[Id0], [s0].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (31ms) [Parameters=[@p3='2c2f7fa7-6921-41b8-8b3c-be3c9ad7b77d' (Nullable = false) (Size = 450), @p0='2025-06-26T00:38:49.4208172Z', @p1='0.5704513878097789685197588747' (Precision = 18) (Scale = 2), @p2='1493.00000000' (Precision = 18) (Scale = 8), @p4='03f3720f-5eaa-4904-9e72-a859c7ebc44c' (Nullable = false) (Size = 450), @p5='1423' (Precision = 18) (Scale = 8), @p6='0001-01-01T00:00:00.0000000', @p7='f9f290ce-ab38-4292-a108-910f0065a49c' (Nullable = false) (Size = 450), @p8='2025-06-26T00:38:49.4761085Z', @p9='08c65af4-b651-4db9-8419-46ec17f0be44' (Nullable = false) (Size = 450), @p10='0.568014' (Precision = 18) (Scale = 8), @p11='0', @p12=NULL (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Holdings] SET [PurchaseDate] = @p0, [PurchasePrice] = @p1, [Quantity] = @p2
+      OUTPUT 1
+      WHERE [Id] = @p3;
+      INSERT INTO [Transactions] ([Id], [Amount], [CreatedAt], [CryptocurrencyId], [Date], [PortfolioId], [PriceAtTime], [Type], [UpdatedAt])
+      VALUES (@p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+info: CryptoApp.Web.Controllers.CryptoController[0]
+      User a49143cb-a58a-4b4d-a65f-5f2c124b0899 bought 1423 ADA at $0.568014 for portfolio 08c65af4-b651-4db9-8419-46ec17f0be44
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[@__id_0='a49143cb-a58a-4b4d-a65f-5f2c124b0899' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [s].[Id], [s].[AccessFailedCount], [s].[Address], [s].[ConcurrencyStamp], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[LastName], [s].[LockoutEnabled], [s].[LockoutEnd], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[PhoneNumber], [s].[PhoneNumberConfirmed], [s].[SecurityStamp], [s].[TwoFactorEnabled], [s].[UserName], [s].[Id0], [s].[CreatedAt], [s].[Name], [s].[UpdatedAt], [s].[UserId], [s0].[Id], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[PortfolioId], [s0].[PurchaseDate], [s0].[PurchasePrice], [s0].[Quantity], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0], [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt]
+      FROM (
+          SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [p].[Id] AS [Id0], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [AspNetUsers] AS [a]
+          LEFT JOIN [Portfolios] AS [p] ON [a].[Id] = [p].[UserId]
+          WHERE [a].[Id] = @__id_0
+      ) AS [s]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s0] ON [s].[Id0] = [s0].[PortfolioId]
+      LEFT JOIN [Transactions] AS [t] ON [s].[Id0] = [t].[PortfolioId]
+      ORDER BY [s].[Id], [s].[Id0], [s0].[Id], [s0].[Id0]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating prices for coins: ripple, ethereum, polkadot, binancecoin, solana, bitcoin, cardano, dogecoin
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating XRP (ripple) price to: $2.19
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating ETH (ethereum) price to: $2422.19
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating DOT (polkadot) price to: $3.36
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating BNB (binancecoin) price to: $647.28
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating SOL (solana) price to: $143.87
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating BTC (bitcoin) price to: $107466
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating ADA (cardano) price to: $0.568014
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating DOGE (dogecoin) price to: $0.164767
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (12ms) [Parameters=[@p6='472f090a-3529-4de6-b673-86ae04963516' (Nullable = false) (Size = 450), @p0='ripple' (Nullable = false) (Size = 4000), @p1='2025-06-12T16:16:57.7996360', @p2='2.19' (Precision = 18) (Scale = 8), @p3='XRP' (Nullable = false) (Size = 4000), @p4='XRP' (Nullable = false) (Size = 4000), @p5='2025-06-12T17:12:31.4169288' (Nullable = true), @p13='73fad6fd-e344-426c-958a-e5fec2804cb2' (Nullable = false) (Size = 450), @p7='ethereum' (Nullable = false) (Size = 4000), @p8='2025-06-12T16:16:57.7996354', @p9='2422.19' (Precision = 18) (Scale = 8), @p10='Ethereum' (Nullable = false) (Size = 4000), @p11='ETH' (Nullable = false) (Size = 4000), @p12='2025-06-12T17:12:31.4169726' (Nullable = true), @p20='8b2a2c40-b70e-4323-817b-fe26ec22e594' (Nullable = false) (Size = 450), @p14='polkadot' (Nullable = false) (Size = 4000), @p15='2025-06-12T16:16:57.7996365', @p16='3.36' (Precision = 18) (Scale = 8), @p17='Polkadot' (Nullable = false) (Size = 4000), @p18='DOT' (Nullable = false) (Size = 4000), @p19='2025-06-12T17:12:31.4169729' (Nullable = true), @p27='92300974-aedd-473e-b5ac-3a4f3a505da5' (Nullable = false) (Size = 450), @p21='binancecoin' (Nullable = false) (Size = 4000), @p22='2025-06-12T16:16:57.7996357', @p23='647.28' (Precision = 18) (Scale = 8), @p24='BNB' (Nullable = false) (Size = 4000), @p25='BNB' (Nullable = false) (Size = 4000), @p26='2025-06-12T17:12:31.4169741' (Nullable = true), @p34='9c8b1ce7-226b-4f54-a6c6-7decef6b0f04' (Nullable = false) (Size = 450), @p28='solana' (Nullable = false) (Size = 4000), @p29='2025-06-12T16:16:57.7996363', @p30='143.87' (Precision = 18) (Scale = 8), @p31='Solana' (Nullable = false) (Size = 4000), @p32='SOL' (Nullable = false) (Size = 4000), @p33='2025-06-12T17:12:31.4169745' (Nullable = true), @p41='dba570ed-e7b1-4c4a-a074-f57c2d93ba7c' (Nullable = false) (Size = 450), @p35='bitcoin' (Nullable = false) (Size = 4000), @p36='2025-06-12T16:16:57.7996061', @p37='107466' (Precision = 18) (Scale = 8), @p38='Bitcoin' (Nullable = false) (Size = 4000), @p39='BTC' (Nullable = false) (Size = 4000), @p40='2025-06-12T17:12:31.4169748' (Nullable = true), @p48='f9f290ce-ab38-4292-a108-910f0065a49c' (Nullable = false) (Size = 450), @p42='cardano' (Nullable = false) (Size = 4000), @p43='2025-06-12T16:16:57.7996361', @p44='0.568014' (Precision = 18) (Scale = 8), @p45='Cardano' (Nullable = false) (Size = 4000), @p46='ADA' (Nullable = false) (Size = 4000), @p47='2025-06-12T17:12:31.4169752' (Nullable = true), @p55='fa7ed3ec-7b27-45c7-9b06-b9bfe469ee4e' (Nullable = false) (Size = 450), @p49='dogecoin' (Nullable = false) (Size = 4000), @p50='2025-06-12T16:16:57.7996367', @p51='0.164767' (Precision = 18) (Scale = 8), @p52='Dogecoin' (Nullable = false) (Size = 4000), @p53='DOGE' (Nullable = false) (Size = 4000), @p54='2025-06-12T17:12:31.4169754' (Nullable = true)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p0, [CreatedAt] = @p1, [CurrentPrice] = @p2, [Name] = @p3, [Symbol] = @p4, [UpdatedAt] = @p5
+      OUTPUT 1
+      WHERE [Id] = @p6;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p7, [CreatedAt] = @p8, [CurrentPrice] = @p9, [Name] = @p10, [Symbol] = @p11, [UpdatedAt] = @p12
+      OUTPUT 1
+      WHERE [Id] = @p13;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p14, [CreatedAt] = @p15, [CurrentPrice] = @p16, [Name] = @p17, [Symbol] = @p18, [UpdatedAt] = @p19
+      OUTPUT 1
+      WHERE [Id] = @p20;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p21, [CreatedAt] = @p22, [CurrentPrice] = @p23, [Name] = @p24, [Symbol] = @p25, [UpdatedAt] = @p26
+      OUTPUT 1
+      WHERE [Id] = @p27;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p28, [CreatedAt] = @p29, [CurrentPrice] = @p30, [Name] = @p31, [Symbol] = @p32, [UpdatedAt] = @p33
+      OUTPUT 1
+      WHERE [Id] = @p34;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p35, [CreatedAt] = @p36, [CurrentPrice] = @p37, [Name] = @p38, [Symbol] = @p39, [UpdatedAt] = @p40
+      OUTPUT 1
+      WHERE [Id] = @p41;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p42, [CreatedAt] = @p43, [CurrentPrice] = @p44, [Name] = @p45, [Symbol] = @p46, [UpdatedAt] = @p47
+      OUTPUT 1
+      WHERE [Id] = @p48;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p49, [CreatedAt] = @p50, [CurrentPrice] = @p51, [Name] = @p52, [Symbol] = @p53, [UpdatedAt] = @p54
+      OUTPUT 1
+      WHERE [Id] = @p55;
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Price update completed
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='a49143cb-a58a-4b4d-a65f-5f2c124b0899' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[@__id_0='a49143cb-a58a-4b4d-a65f-5f2c124b0899' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [s].[Id], [s].[AccessFailedCount], [s].[Address], [s].[ConcurrencyStamp], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[LastName], [s].[LockoutEnabled], [s].[LockoutEnd], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[PhoneNumber], [s].[PhoneNumberConfirmed], [s].[SecurityStamp], [s].[TwoFactorEnabled], [s].[UserName], [s].[Id0], [s].[CreatedAt], [s].[Name], [s].[UpdatedAt], [s].[UserId], [s0].[Id], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[PortfolioId], [s0].[PurchaseDate], [s0].[PurchasePrice], [s0].[Quantity], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0], [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt]
+      FROM (
+          SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [p].[Id] AS [Id0], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [AspNetUsers] AS [a]
+          LEFT JOIN [Portfolios] AS [p] ON [a].[Id] = [p].[UserId]
+          WHERE [a].[Id] = @__id_0
+      ) AS [s]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s0] ON [s].[Id0] = [s0].[PortfolioId]
+      LEFT JOIN [Transactions] AS [t] ON [s].[Id0] = [t].[PortfolioId]
+      ORDER BY [s].[Id], [s].[Id0], [s0].[Id], [s0].[Id0]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[@__portfolioId_0='08c65af4-b651-4db9-8419-46ec17f0be44' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [p0].[Id], [p0].[CreatedAt], [p0].[Name], [p0].[UpdatedAt], [p0].[UserId], [s].[Id], [s].[CreatedAt], [s].[CryptocurrencyId], [s].[PortfolioId], [s].[PurchaseDate], [s].[PurchasePrice], [s].[Quantity], [s].[UpdatedAt], [s].[Id0], [s].[CoinGeckoId], [s].[CreatedAt0], [s].[CurrentPrice], [s].[Name], [s].[Symbol], [s].[UpdatedAt0], [s0].[Id], [s0].[Amount], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[Date], [s0].[PortfolioId], [s0].[PriceAtTime], [s0].[Type], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0]
+      FROM (
+          SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [Portfolios] AS [p]
+          WHERE [p].[Id] = @__portfolioId_0
+      ) AS [p0]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s] ON [p0].[Id] = [s].[PortfolioId]
+      LEFT JOIN (
+          SELECT [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt], [c0].[Id] AS [Id0], [c0].[CoinGeckoId], [c0].[CreatedAt] AS [CreatedAt0], [c0].[CurrentPrice], [c0].[Name], [c0].[Symbol], [c0].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Transactions] AS [t]
+          INNER JOIN [Cryptocurrencies] AS [c0] ON [t].[CryptocurrencyId] = [c0].[Id]
+      ) AS [s0] ON [p0].[Id] = [s0].[PortfolioId]
+      ORDER BY [p0].[Id], [s].[Id], [s].[Id0], [s0].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='a49143cb-a58a-4b4d-a65f-5f2c124b0899' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__portfolioId_0='08c65af4-b651-4db9-8419-46ec17f0be44' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [p0].[Id], [p0].[CreatedAt], [p0].[Name], [p0].[UpdatedAt], [p0].[UserId], [s].[Id], [s].[CreatedAt], [s].[CryptocurrencyId], [s].[PortfolioId], [s].[PurchaseDate], [s].[PurchasePrice], [s].[Quantity], [s].[UpdatedAt], [s].[Id0], [s].[CoinGeckoId], [s].[CreatedAt0], [s].[CurrentPrice], [s].[Name], [s].[Symbol], [s].[UpdatedAt0], [s0].[Id], [s0].[Amount], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[Date], [s0].[PortfolioId], [s0].[PriceAtTime], [s0].[Type], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0]
+      FROM (
+          SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [Portfolios] AS [p]
+          WHERE [p].[Id] = @__portfolioId_0
+      ) AS [p0]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s] ON [p0].[Id] = [s].[PortfolioId]
+      LEFT JOIN (
+          SELECT [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt], [c0].[Id] AS [Id0], [c0].[CoinGeckoId], [c0].[CreatedAt] AS [CreatedAt0], [c0].[CurrentPrice], [c0].[Name], [c0].[Symbol], [c0].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Transactions] AS [t]
+          INNER JOIN [Cryptocurrencies] AS [c0] ON [t].[CryptocurrencyId] = [c0].[Id]
+      ) AS [s0] ON [p0].[Id] = [s0].[PortfolioId]
+      ORDER BY [p0].[Id], [s].[Id], [s].[Id0], [s0].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='08c65af4-b651-4db9-8419-46ec17f0be44' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+      FROM [Portfolios] AS [p]
+      WHERE [p].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='f9f290ce-ab38-4292-a108-910f0065a49c' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+      WHERE [c].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[@__portfolioId_0='08c65af4-b651-4db9-8419-46ec17f0be44' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [p0].[Id], [p0].[CreatedAt], [p0].[Name], [p0].[UpdatedAt], [p0].[UserId], [s].[Id], [s].[CreatedAt], [s].[CryptocurrencyId], [s].[PortfolioId], [s].[PurchaseDate], [s].[PurchasePrice], [s].[Quantity], [s].[UpdatedAt], [s].[Id0], [s].[CoinGeckoId], [s].[CreatedAt0], [s].[CurrentPrice], [s].[Name], [s].[Symbol], [s].[UpdatedAt0], [s0].[Id], [s0].[Amount], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[Date], [s0].[PortfolioId], [s0].[PriceAtTime], [s0].[Type], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0]
+      FROM (
+          SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [Portfolios] AS [p]
+          WHERE [p].[Id] = @__portfolioId_0
+      ) AS [p0]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s] ON [p0].[Id] = [s].[PortfolioId]
+      LEFT JOIN (
+          SELECT [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt], [c0].[Id] AS [Id0], [c0].[CoinGeckoId], [c0].[CreatedAt] AS [CreatedAt0], [c0].[CurrentPrice], [c0].[Name], [c0].[Symbol], [c0].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Transactions] AS [t]
+          INNER JOIN [Cryptocurrencies] AS [c0] ON [t].[CryptocurrencyId] = [c0].[Id]
+      ) AS [s0] ON [p0].[Id] = [s0].[PortfolioId]
+      ORDER BY [p0].[Id], [s].[Id], [s].[Id0], [s0].[Id]
+info: System.Net.Http.HttpClient.ICryptoFetchService.LogicalHandler[100]
+      Start processing HTTP request GET https://api.coingecko.com/api/v3/simple/price?*
+info: System.Net.Http.HttpClient.ICryptoFetchService.ClientHandler[100]
+      Sending HTTP request GET https://api.coingecko.com/api/v3/simple/price?*
+info: System.Net.Http.HttpClient.ICryptoFetchService.ClientHandler[101]
+      Received HTTP response headers after 566.5633ms - 200
+info: System.Net.Http.HttpClient.ICryptoFetchService.LogicalHandler[101]
+      End processing HTTP request after 573.2596ms - 200
+warn: CryptoApp.Infrastructure.Services.CryptoFetchService[0]
+      No price data found for ADA
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='a49143cb-a58a-4b4d-a65f-5f2c124b0899' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='08c65af4-b651-4db9-8419-46ec17f0be44' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+      FROM [Portfolios] AS [p]
+      WHERE [p].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='f9f290ce-ab38-4292-a108-910f0065a49c' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+      WHERE [c].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (16ms) [Parameters=[@__portfolioId_0='08c65af4-b651-4db9-8419-46ec17f0be44' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [p0].[Id], [p0].[CreatedAt], [p0].[Name], [p0].[UpdatedAt], [p0].[UserId], [s].[Id], [s].[CreatedAt], [s].[CryptocurrencyId], [s].[PortfolioId], [s].[PurchaseDate], [s].[PurchasePrice], [s].[Quantity], [s].[UpdatedAt], [s].[Id0], [s].[CoinGeckoId], [s].[CreatedAt0], [s].[CurrentPrice], [s].[Name], [s].[Symbol], [s].[UpdatedAt0], [s0].[Id], [s0].[Amount], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[Date], [s0].[PortfolioId], [s0].[PriceAtTime], [s0].[Type], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0]
+      FROM (
+          SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [Portfolios] AS [p]
+          WHERE [p].[Id] = @__portfolioId_0
+      ) AS [p0]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s] ON [p0].[Id] = [s].[PortfolioId]
+      LEFT JOIN (
+          SELECT [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt], [c0].[Id] AS [Id0], [c0].[CoinGeckoId], [c0].[CreatedAt] AS [CreatedAt0], [c0].[CurrentPrice], [c0].[Name], [c0].[Symbol], [c0].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Transactions] AS [t]
+          INNER JOIN [Cryptocurrencies] AS [c0] ON [t].[CryptocurrencyId] = [c0].[Id]
+      ) AS [s0] ON [p0].[Id] = [s0].[PortfolioId]
+      ORDER BY [p0].[Id], [s].[Id], [s].[Id0], [s0].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__portfolioId_0='08c65af4-b651-4db9-8419-46ec17f0be44' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [p0].[Id], [p0].[CreatedAt], [p0].[Name], [p0].[UpdatedAt], [p0].[UserId], [s].[Id], [s].[CreatedAt], [s].[CryptocurrencyId], [s].[PortfolioId], [s].[PurchaseDate], [s].[PurchasePrice], [s].[Quantity], [s].[UpdatedAt], [s].[Id0], [s].[CoinGeckoId], [s].[CreatedAt0], [s].[CurrentPrice], [s].[Name], [s].[Symbol], [s].[UpdatedAt0], [s0].[Id], [s0].[Amount], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[Date], [s0].[PortfolioId], [s0].[PriceAtTime], [s0].[Type], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0]
+      FROM (
+          SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [Portfolios] AS [p]
+          WHERE [p].[Id] = @__portfolioId_0
+      ) AS [p0]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s] ON [p0].[Id] = [s].[PortfolioId]
+      LEFT JOIN (
+          SELECT [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt], [c0].[Id] AS [Id0], [c0].[CoinGeckoId], [c0].[CreatedAt] AS [CreatedAt0], [c0].[CurrentPrice], [c0].[Name], [c0].[Symbol], [c0].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Transactions] AS [t]
+          INNER JOIN [Cryptocurrencies] AS [c0] ON [t].[CryptocurrencyId] = [c0].[Id]
+      ) AS [s0] ON [p0].[Id] = [s0].[PortfolioId]
+      ORDER BY [p0].[Id], [s].[Id], [s].[Id0], [s0].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@p1='2c2f7fa7-6921-41b8-8b3c-be3c9ad7b77d' (Nullable = false) (Size = 450), @p0='1280.00000000' (Precision = 18) (Scale = 8), @p2='d1e2cbe8-f0d2-4ab8-85f1-b09095a8ccca' (Nullable = false) (Size = 450), @p3='213' (Precision = 18) (Scale = 8), @p4='0001-01-01T00:00:00.0000000', @p5='f9f290ce-ab38-4292-a108-910f0065a49c' (Nullable = false) (Size = 450), @p6='2025-06-26T00:38:55.4054024Z', @p7='08c65af4-b651-4db9-8419-46ec17f0be44' (Nullable = false) (Size = 450), @p8='0.568014' (Precision = 18) (Scale = 8), @p9='1', @p10=NULL (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Holdings] SET [Quantity] = @p0
+      OUTPUT 1
+      WHERE [Id] = @p1;
+      INSERT INTO [Transactions] ([Id], [Amount], [CreatedAt], [CryptocurrencyId], [Date], [PortfolioId], [PriceAtTime], [Type], [UpdatedAt])
+      VALUES (@p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+info: CryptoApp.Web.Controllers.CryptoController[0]
+      User a49143cb-a58a-4b4d-a65f-5f2c124b0899 sold 213 ADA from portfolio 08c65af4-b651-4db9-8419-46ec17f0be44
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (12ms) [Parameters=[@__portfolioId_0='08c65af4-b651-4db9-8419-46ec17f0be44' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [p0].[Id], [p0].[CreatedAt], [p0].[Name], [p0].[UpdatedAt], [p0].[UserId], [s].[Id], [s].[CreatedAt], [s].[CryptocurrencyId], [s].[PortfolioId], [s].[PurchaseDate], [s].[PurchasePrice], [s].[Quantity], [s].[UpdatedAt], [s].[Id0], [s].[CoinGeckoId], [s].[CreatedAt0], [s].[CurrentPrice], [s].[Name], [s].[Symbol], [s].[UpdatedAt0], [s0].[Id], [s0].[Amount], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[Date], [s0].[PortfolioId], [s0].[PriceAtTime], [s0].[Type], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0]
+      FROM (
+          SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [Portfolios] AS [p]
+          WHERE [p].[Id] = @__portfolioId_0
+      ) AS [p0]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s] ON [p0].[Id] = [s].[PortfolioId]
+      LEFT JOIN (
+          SELECT [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt], [c0].[Id] AS [Id0], [c0].[CoinGeckoId], [c0].[CreatedAt] AS [CreatedAt0], [c0].[CurrentPrice], [c0].[Name], [c0].[Symbol], [c0].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Transactions] AS [t]
+          INNER JOIN [Cryptocurrencies] AS [c0] ON [t].[CryptocurrencyId] = [c0].[Id]
+      ) AS [s0] ON [p0].[Id] = [s0].[PortfolioId]
+      ORDER BY [p0].[Id], [s].[Id], [s].[Id0], [s0].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='a49143cb-a58a-4b4d-a65f-5f2c124b0899' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (18ms) [Parameters=[@__portfolioId_0='08c65af4-b651-4db9-8419-46ec17f0be44' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [p0].[Id], [p0].[CreatedAt], [p0].[Name], [p0].[UpdatedAt], [p0].[UserId], [s].[Id], [s].[CreatedAt], [s].[CryptocurrencyId], [s].[PortfolioId], [s].[PurchaseDate], [s].[PurchasePrice], [s].[Quantity], [s].[UpdatedAt], [s].[Id0], [s].[CoinGeckoId], [s].[CreatedAt0], [s].[CurrentPrice], [s].[Name], [s].[Symbol], [s].[UpdatedAt0], [s0].[Id], [s0].[Amount], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[Date], [s0].[PortfolioId], [s0].[PriceAtTime], [s0].[Type], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0]
+      FROM (
+          SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [Portfolios] AS [p]
+          WHERE [p].[Id] = @__portfolioId_0
+      ) AS [p0]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s] ON [p0].[Id] = [s].[PortfolioId]
+      LEFT JOIN (
+          SELECT [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt], [c0].[Id] AS [Id0], [c0].[CoinGeckoId], [c0].[CreatedAt] AS [CreatedAt0], [c0].[CurrentPrice], [c0].[Name], [c0].[Symbol], [c0].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Transactions] AS [t]
+          INNER JOIN [Cryptocurrencies] AS [c0] ON [t].[CryptocurrencyId] = [c0].[Id]
+      ) AS [s0] ON [p0].[Id] = [s0].[PortfolioId]
+      ORDER BY [p0].[Id], [s].[Id], [s].[Id0], [s0].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[@__portfolioId_0='08c65af4-b651-4db9-8419-46ec17f0be44' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [p0].[Id], [p0].[CreatedAt], [p0].[Name], [p0].[UpdatedAt], [p0].[UserId], [s].[Id], [s].[CreatedAt], [s].[CryptocurrencyId], [s].[PortfolioId], [s].[PurchaseDate], [s].[PurchasePrice], [s].[Quantity], [s].[UpdatedAt], [s].[Id0], [s].[CoinGeckoId], [s].[CreatedAt0], [s].[CurrentPrice], [s].[Name], [s].[Symbol], [s].[UpdatedAt0], [s0].[Id], [s0].[Amount], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[Date], [s0].[PortfolioId], [s0].[PriceAtTime], [s0].[Type], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0]
+      FROM (
+          SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [Portfolios] AS [p]
+          WHERE [p].[Id] = @__portfolioId_0
+      ) AS [p0]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s] ON [p0].[Id] = [s].[PortfolioId]
+      LEFT JOIN (
+          SELECT [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt], [c0].[Id] AS [Id0], [c0].[CoinGeckoId], [c0].[CreatedAt] AS [CreatedAt0], [c0].[CurrentPrice], [c0].[Name], [c0].[Symbol], [c0].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Transactions] AS [t]
+          INNER JOIN [Cryptocurrencies] AS [c0] ON [t].[CryptocurrencyId] = [c0].[Id]
+      ) AS [s0] ON [p0].[Id] = [s0].[PortfolioId]
+      ORDER BY [p0].[Id], [s].[Id], [s].[Id0], [s0].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='a49143cb-a58a-4b4d-a65f-5f2c124b0899' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='d1e2cbe8-f0d2-4ab8-85f1-b09095a8ccca' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt]
+      FROM [Transactions] AS [t]
+      WHERE [t].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[@__portfolioId_0='08c65af4-b651-4db9-8419-46ec17f0be44' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [p0].[Id], [p0].[CreatedAt], [p0].[Name], [p0].[UpdatedAt], [p0].[UserId], [s].[Id], [s].[CreatedAt], [s].[CryptocurrencyId], [s].[PortfolioId], [s].[PurchaseDate], [s].[PurchasePrice], [s].[Quantity], [s].[UpdatedAt], [s].[Id0], [s].[CoinGeckoId], [s].[CreatedAt0], [s].[CurrentPrice], [s].[Name], [s].[Symbol], [s].[UpdatedAt0], [s0].[Id], [s0].[Amount], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[Date], [s0].[PortfolioId], [s0].[PriceAtTime], [s0].[Type], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0]
+      FROM (
+          SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [Portfolios] AS [p]
+          WHERE [p].[Id] = @__portfolioId_0
+      ) AS [p0]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s] ON [p0].[Id] = [s].[PortfolioId]
+      LEFT JOIN (
+          SELECT [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt], [c0].[Id] AS [Id0], [c0].[CoinGeckoId], [c0].[CreatedAt] AS [CreatedAt0], [c0].[CurrentPrice], [c0].[Name], [c0].[Symbol], [c0].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Transactions] AS [t]
+          INNER JOIN [Cryptocurrencies] AS [c0] ON [t].[CryptocurrencyId] = [c0].[Id]
+      ) AS [s0] ON [p0].[Id] = [s0].[PortfolioId]
+      ORDER BY [p0].[Id], [s].[Id], [s].[Id0], [s0].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@p0='d1e2cbe8-f0d2-4ab8-85f1-b09095a8ccca' (Nullable = false) (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SET IMPLICIT_TRANSACTIONS OFF;
+      SET NOCOUNT ON;
+      DELETE FROM [Transactions]
+      OUTPUT 1
+      WHERE [Id] = @p0;
+info: CryptoApp.Web.Controllers.PortfolioController[0]
+      Transaction d1e2cbe8-f0d2-4ab8-85f1-b09095a8ccca deleted by user a49143cb-a58a-4b4d-a65f-5f2c124b0899
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__portfolioId_0='08c65af4-b651-4db9-8419-46ec17f0be44' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [p0].[Id], [p0].[CreatedAt], [p0].[Name], [p0].[UpdatedAt], [p0].[UserId], [s].[Id], [s].[CreatedAt], [s].[CryptocurrencyId], [s].[PortfolioId], [s].[PurchaseDate], [s].[PurchasePrice], [s].[Quantity], [s].[UpdatedAt], [s].[Id0], [s].[CoinGeckoId], [s].[CreatedAt0], [s].[CurrentPrice], [s].[Name], [s].[Symbol], [s].[UpdatedAt0], [s0].[Id], [s0].[Amount], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[Date], [s0].[PortfolioId], [s0].[PriceAtTime], [s0].[Type], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0]
+      FROM (
+          SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [Portfolios] AS [p]
+          WHERE [p].[Id] = @__portfolioId_0
+      ) AS [p0]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s] ON [p0].[Id] = [s].[PortfolioId]
+      LEFT JOIN (
+          SELECT [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt], [c0].[Id] AS [Id0], [c0].[CoinGeckoId], [c0].[CreatedAt] AS [CreatedAt0], [c0].[CurrentPrice], [c0].[Name], [c0].[Symbol], [c0].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Transactions] AS [t]
+          INNER JOIN [Cryptocurrencies] AS [c0] ON [t].[CryptocurrencyId] = [c0].[Id]
+      ) AS [s0] ON [p0].[Id] = [s0].[PortfolioId]
+      ORDER BY [p0].[Id], [s].[Id], [s].[Id0], [s0].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='a49143cb-a58a-4b4d-a65f-5f2c124b0899' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (12ms) [Parameters=[@__id_0='a49143cb-a58a-4b4d-a65f-5f2c124b0899' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [s].[Id], [s].[AccessFailedCount], [s].[Address], [s].[ConcurrencyStamp], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[LastName], [s].[LockoutEnabled], [s].[LockoutEnd], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[PhoneNumber], [s].[PhoneNumberConfirmed], [s].[SecurityStamp], [s].[TwoFactorEnabled], [s].[UserName], [s].[Id0], [s].[CreatedAt], [s].[Name], [s].[UpdatedAt], [s].[UserId], [s0].[Id], [s0].[CreatedAt], [s0].[CryptocurrencyId], [s0].[PortfolioId], [s0].[PurchaseDate], [s0].[PurchasePrice], [s0].[Quantity], [s0].[UpdatedAt], [s0].[Id0], [s0].[CoinGeckoId], [s0].[CreatedAt0], [s0].[CurrentPrice], [s0].[Name], [s0].[Symbol], [s0].[UpdatedAt0], [t].[Id], [t].[Amount], [t].[CreatedAt], [t].[CryptocurrencyId], [t].[Date], [t].[PortfolioId], [t].[PriceAtTime], [t].[Type], [t].[UpdatedAt]
+      FROM (
+          SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [p].[Id] AS [Id0], [p].[CreatedAt], [p].[Name], [p].[UpdatedAt], [p].[UserId]
+          FROM [AspNetUsers] AS [a]
+          LEFT JOIN [Portfolios] AS [p] ON [a].[Id] = [p].[UserId]
+          WHERE [a].[Id] = @__id_0
+      ) AS [s]
+      LEFT JOIN (
+          SELECT [h].[Id], [h].[CreatedAt], [h].[CryptocurrencyId], [h].[PortfolioId], [h].[PurchaseDate], [h].[PurchasePrice], [h].[Quantity], [h].[UpdatedAt], [c].[Id] AS [Id0], [c].[CoinGeckoId], [c].[CreatedAt] AS [CreatedAt0], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt] AS [UpdatedAt0]
+          FROM [Holdings] AS [h]
+          INNER JOIN [Cryptocurrencies] AS [c] ON [h].[CryptocurrencyId] = [c].[Id]
+      ) AS [s0] ON [s].[Id0] = [s0].[PortfolioId]
+      LEFT JOIN [Transactions] AS [t] ON [s].[Id0] = [t].[PortfolioId]
+      ORDER BY [s].[Id], [s].[Id0], [s0].[Id], [s0].[Id0]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CoinGeckoId], [c].[CreatedAt], [c].[CurrentPrice], [c].[Name], [c].[Symbol], [c].[UpdatedAt]
+      FROM [Cryptocurrencies] AS [c]
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating prices for coins: ripple, ethereum, polkadot, binancecoin, solana, bitcoin, cardano, dogecoin
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating XRP (ripple) price to: $2.19
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating ETH (ethereum) price to: $2422.19
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating DOT (polkadot) price to: $3.36
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating BNB (binancecoin) price to: $647.28
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating SOL (solana) price to: $143.87
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating BTC (bitcoin) price to: $107466
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating ADA (cardano) price to: $0.568014
+info: CryptoApp.Application.Services.CryptocurrencyService[0]
+      Updating DOGE (dogecoin) price to: $0.164767
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (11ms) [Parameters=[@p6='472f090a-3529-4de6-b673-86ae04963516' (Nullable = false) (Size = 450), @p0='ripple' (Nullable = false) (Size = 4000), @p1='2025-06-12T16:16:57.7996360', @p2='2.19' (Precision = 18) (Scale = 8), @p3='XRP' (Nullable = false) (Size = 4000), @p4='XRP' (Nullable = false) (Size = 4000), @p5='2025-06-12T17:12:31.4169288' (Nullable = true), @p13='73fad6fd-e344-426c-958a-e5fec2804cb2' (Nullable = false) (Size = 450), @p7='ethereum' (Nullable = false) (Size = 4000), @p8='2025-06-12T16:16:57.7996354', @p9='2422.19' (Precision = 18) (Scale = 8), @p10='Ethereum' (Nullable = false) (Size = 4000), @p11='ETH' (Nullable = false) (Size = 4000), @p12='2025-06-12T17:12:31.4169726' (Nullable = true), @p20='8b2a2c40-b70e-4323-817b-fe26ec22e594' (Nullable = false) (Size = 450), @p14='polkadot' (Nullable = false) (Size = 4000), @p15='2025-06-12T16:16:57.7996365', @p16='3.36' (Precision = 18) (Scale = 8), @p17='Polkadot' (Nullable = false) (Size = 4000), @p18='DOT' (Nullable = false) (Size = 4000), @p19='2025-06-12T17:12:31.4169729' (Nullable = true), @p27='92300974-aedd-473e-b5ac-3a4f3a505da5' (Nullable = false) (Size = 450), @p21='binancecoin' (Nullable = false) (Size = 4000), @p22='2025-06-12T16:16:57.7996357', @p23='647.28' (Precision = 18) (Scale = 8), @p24='BNB' (Nullable = false) (Size = 4000), @p25='BNB' (Nullable = false) (Size = 4000), @p26='2025-06-12T17:12:31.4169741' (Nullable = true), @p34='9c8b1ce7-226b-4f54-a6c6-7decef6b0f04' (Nullable = false) (Size = 450), @p28='solana' (Nullable = false) (Size = 4000), @p29='2025-06-12T16:16:57.7996363', @p30='143.87' (Precision = 18) (Scale = 8), @p31='Solana' (Nullable = false) (Size = 4000), @p32='SOL' (Nullable = false) (Size = 4000), @p33='2025-06-12T17:12:31.4169745' (Nullable = true), @p41='dba570ed-e7b1-4c4a-a074-f57c2d93ba7c' (Nullable = false) (Size = 450), @p35='bitcoin' (Nullable = false) (Size = 4000), @p36='2025-06-12T16:16:57.7996061', @p37='107466' (Precision = 18) (Scale = 8), @p38='Bitcoin' (Nullable = false) (Size = 4000), @p39='BTC' (Nullable = false) (Size = 4000), @p40='2025-06-12T17:12:31.4169748' (Nullable = true), @p48='f9f290ce-ab38-4292-a108-910f0065a49c' (Nullable = false) (Size = 450), @p42='cardano' (Nullable = false) (Size = 4000), @p43='2025-06-12T16:16:57.7996361', @p44='0.568014' (Precision = 18) (Scale = 8), @p45='Cardano' (Nullable = false) (Size = 4000), @p46='ADA' (Nullable = false) (Size = 4000), @p47='2025-06-12T17:12:31.4169752' (Nullable = true), @p55='fa7ed3ec-7b27-45c7-9b06-b9bfe469ee4e' (Nullable = false) (Size = 450), @p49='dogecoin' (Nullable = false) (Size = 4000), @p50='2025-06-12T16:16:57.7996367', @p51='0.164767' (Precision = 18) (Scale = 8), @p52='Dogecoin' (Nullable = false) (Size = 4000), @p53='DOGE' (Nullable = false) (Size = 4000), @p54='2025-06-12T17:12:31.4169754' (Nullable = true)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p0, [CreatedAt] = @p1, [CurrentPrice] = @p2, [Name] = @p3, [Symbol] = @p4, [UpdatedAt] = @p5
+      OUTPUT 1
+      WHERE [Id] = @p6;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p7, [CreatedAt] = @p8, [CurrentPrice] = @p9, [Name] = @p10, [Symbol] = @p11, [UpdatedAt] = @p12
+      OUTPUT 1
+      WHERE [Id] = @p13;
+      UPDATE [Cryptocurrencies] SET [CoinGeckoId] = @p14, [CreatedAt] 

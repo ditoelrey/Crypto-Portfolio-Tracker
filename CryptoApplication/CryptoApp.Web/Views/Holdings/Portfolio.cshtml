@@ -1,0 +1,71 @@
+@model IEnumerable<CryptoApp.Domain.Models.Holding>
+
+@{
+    ViewData["Title"] = "Portfolio Holdings";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Holdings</h1>
+        <div>
+            <a asp-action="Add" asp-route-portfolioId="@Model.FirstOrDefault()?.PortfolioId" class="btn btn-primary">Add New Holding</a>
+        </div>
+    </div>
+
+    @if (Model.Any())
+    {
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Cryptocurrency</th>
+                                <th>Quantity</th>
+                                <th>Purchase Price</th>
+                                <th>Current Price</th>
+                                <th>Current Value</th>
+                                <th>Purchase Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var holding in Model)
+                            {
+                                <tr>
+                                    <td>@holding.Cryptocurrency.Name (@holding.Cryptocurrency.Symbol.ToUpper())</td>
+                                    <td>@Math.Floor(holding.Quantity).ToString("0")</td>
+                                    <td>$@holding.PurchasePrice.ToString("F2")</td>
+                                    <td>$@holding.Cryptocurrency.CurrentPrice.ToString("F2")</td>
+                                    <td>$@holding.CurrentValue.ToString("F2")</td>
+                                    <td>@holding.PurchaseDate.ToLocalTime().ToString("g")</td>
+                                    <td>
+                                        <a asp-action="Edit" asp-route-id="@holding.Id" class="btn btn-sm btn-secondary">Edit</a>
+                                        <a asp-controller="Crypto" asp-action="Buy" 
+                                           asp-route-id="@holding.CryptocurrencyId" 
+                                           asp-route-portfolioId="@holding.PortfolioId" 
+                                           class="btn btn-sm btn-success">Buy More</a>
+                                        <a asp-controller="Crypto" asp-action="Sell" 
+                                           asp-route-id="@holding.CryptocurrencyId" 
+                                           asp-route-portfolioId="@holding.PortfolioId" 
+                                           class="btn btn-sm btn-danger">Sell</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">
+            You don't have any holdings yet. <a asp-action="Add" asp-route-portfolioId="@ViewBag.PortfolioId">Add your first holding</a>
+        </div>
+    }
+
+    <div class="mt-3">
+        <a asp-controller="Portfolio" asp-action="Details" asp-route-id="@Model.FirstOrDefault()?.PortfolioId" class="btn btn-secondary">Back to Portfolio</a>
+    </div>
+</div>

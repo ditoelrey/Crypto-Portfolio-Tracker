@@ -1,0 +1,55 @@
+@model IEnumerable<CryptoApp.Domain.Models.Cryptocurrency>
+
+@{
+    ViewData["Title"] = "Cryptocurrencies";
+}
+
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Available Cryptocurrencies</h1>
+        <a asp-action="Create" class="btn btn-primary">Add New Cryptocurrency</a>
+    </div>
+
+    <div class="row">
+        @foreach (var crypto in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">@crypto.Name</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">@crypto.Symbol.ToUpper()</h6>
+                        <p class="card-text">
+                            <span class="h4">$@crypto.CurrentPrice.ToString("N2")</span>
+                        </p>
+                        <div class="d-flex gap-2">
+                            @if (ViewData["PortfolioId"] != null)
+                            {
+                                <a asp-action="Buy" asp-route-id="@crypto.Id" 
+                                   asp-route-portfolioId="@ViewData["PortfolioId"]" 
+                                   class="btn btn-primary">Buy</a>
+                            }
+                            <a asp-action="Details" asp-route-id="@crypto.Id" class="btn btn-info">Details</a>
+                            <a asp-action="Delete" asp-route-id="@crypto.Id" class="btn btn-danger">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info" role="alert">
+            No cryptocurrencies available at the moment. Please try again later.
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        // Auto-refresh prices every 30 seconds
+        setTimeout(function() {
+            location.reload();
+        }, 30000);
+    </script>
+}
