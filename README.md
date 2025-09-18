@@ -18,10 +18,3 @@ C# | ASP.NET Core | Entity Framework Core | SQL Server | ASP.NET Identity | Http
 - Background service periodically refreshes prices and updates cache/DB.
 - External API failures fall back to cached values; retry policies minimize transient errors.
 
-## Extending
-- Add analytics, alerts or simulated trading.
-- Add unit/integration tests for service logic and DB operations.
-- Harden concurrency with explicit DB transactions where needed.
-
-## Contact
-See repository for code structure and implementation details. Use issues/PRs for questions or contributions.
